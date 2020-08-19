@@ -20,11 +20,16 @@ public class BorrowBookUI {
 	private UIState state;			// variable type 'uI_STaTe' and name 'StaTe' changed to 'UIState' and 'state'
 
 	
-	public BorrowBookUI(bORROW_bOOK_cONTROL control) {
-		this.CoNtRoL = control;
-		InPuT = new Scanner(System.in);
-		StaTe = uI_STaTe.INITIALISED;
-		control.SeT_Ui(this);
+// 	public BorrowBookUI(bORROW_bOOK_cONTROL control) {
+	public BorrowBookUI(BorrowBookControl control) {	// parameter's variable type 'bORROW_bOOK_cONTROL' changed to 'BorrowBookControl'
+// 		this.CoNtRoL = control;
+		this.control = control;				// variable name 'CoNtRoL' changed to 'control'
+// 		InPuT = new Scanner(System.in);
+		input = new Scanner(System.in);			// variable name 'InPuT' changed to 'input'
+// 		StaTe = uI_STaTe.INITIALISED;
+		state = UISTate.INITIALISED;			// variable name 'StaTe' and enum name 'uI_STaTe' changed to 'state' and 'UISTate'
+// 		control.SeT_Ui(this);
+		control.setUI(this);				// function name 'SeT_Ui' changed to 'setUI'
 	}
 
 	
