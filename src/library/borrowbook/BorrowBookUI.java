@@ -73,17 +73,23 @@ public class BorrowBookUI {
 
 				
 			case READY:
-				String MEM_STR = iNpUT("Swipe member card (press <enter> to cancel): ");
-				if (MEM_STR.length() == 0) {
-					CoNtRoL.CaNcEl();
+// 				String MEM_STR = iNpUT("Swipe member card (press <enter> to cancel): ");
+				String memberString = input("Swipe member card (press <enter> to cancel): ");// variable name 'MEM_STR' and 'function name 'iNpUT' changed to 'memberString' and 'input'
+// 				if (MEM_STR.length() == 0) {	
+				if (memberString.length() == 0) {					// variable name 'MEM_STR' changed to 'memberString'
+// 					CoNtRoL.CaNcEl();
+					control.cancel();					// variable name 'CoNtRoL' and 'CaNcEl' changed to 'control' and 'cancel'
 					break;
 				}
-				try {
-					int MeMbEr_Id = Integer.valueOf(MEM_STR).intValue();
-					CoNtRoL.SwIpEd(MeMbEr_Id);
+				try {					
+// 					int MeMbEr_Id = Integer.valueOf(MEM_STR).intValue();
+					int memberID = Integer.valueOf(memberString).intValue();	// variable name 'MeMbEr_Id' and 'MEM_STR' changed to 'memberID' and 'memberString'
+// 					CoNtRoL.SwIpEd(MeMbEr_Id);
+					control.swiped(memberID);					// name 'CoNtRoL', 'SwIpEd' and 'MeMbEr_Id' changed to 'control', 'swiped' and 'memberID'
 				}
 				catch (NumberFormatException e) {
-					OuTpUt("Invalid Member Id");
+// 					OuTpUt("Invalid Member Id");
+					output("Invalid Member Id");					// function name 'OuTpUt' changed to 'output'
 				}
 				break;
 
