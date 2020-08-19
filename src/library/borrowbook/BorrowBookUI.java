@@ -42,8 +42,10 @@ public class BorrowBookUI {
 	}	
 		
 		
-	private void OuTpUt(Object ObJeCt) {
-		System.out.println(ObJeCt);
+	private void output(Object object) {	// function name 'OuTpUt' and parameter variable name 'ObJeCt' changed to 'output' and 'object'
+// 	private void OuTpUt(Object ObJeCt) {
+		System.out.println(object);	// argument name 'ObJeCt' changed to 'object'
+// 		System.out.println(ObJeCt);
 	}
 	
 			
