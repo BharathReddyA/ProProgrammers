@@ -125,13 +125,18 @@ public class BorrowBookUI {
 					
 				
 			case FINALISING:
-				String AnS = iNpUT("Commit loans? (Y/N): ");
-				if (AnS.toUpperCase().equals("N")) {
-					CoNtRoL.CaNcEl();
+// 				String AnS = iNpUT("Commit loans? (Y/N): ");
+				String answer = input("Commit loans? (Y/N): ");	// variable name 'AnS' and function 'iNpUT' changed to 'answer' and 'input'
+// 				if (AnS.toUpperCase().equals("N")) {
+				if (answer.toUpperCase().equals("N")) {		// 'AnS' changed to 'answer'
+// 					CoNtRoL.CaNcEl();
+					control.cancel();			// 'CoNtRoL' and 'CaNcEl' changed to 'control' and 'cancel'
 					
 				} else {
-					CoNtRoL.CoMmIt_LoAnS();
-					iNpUT("Press <any key> to complete ");
+// 					CoNtRoL.CoMmIt_LoAnS();
+					control.commitLoans();			// 'CoNtRoL' and 'CoMmIt_LoAnS' changed to 'control' and 'commitLoans;
+// 					iNpUT("Press <any key> to complete ");
+					input("Press <any key> to complete ");	// function name 'iNpUT' changed to 'input'
 				}
 				break;
 				
