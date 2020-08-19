@@ -142,20 +142,25 @@ public class BorrowBookUI {
 				
 				
 			case COMPLETED:
-				OuTpUt("Borrowing Completed");
+// 				OuTpUt("Borrowing Completed");
+				output("Borrowing Completed");		// function name 'OuTpUt' changed to 'output'
 				return;
 	
 				
 			default:
-				OuTpUt("Unhandled state");
-				throw new RuntimeException("BorrowBookUI : unhandled state :" + StaTe);			
+// 				OuTpUt("Unhandled state");
+				output("Unhandled state");		// function name 'OuTpUt' changed to 'output'
+// 				throw new RuntimeException("BorrowBookUI : unhandled state :" + StaTe);
+				throw new RuntimeException("BorrowBookUI : unhandled state :" + state);		// variable name 'StaTe' changed to 'state'
 			}
 		}		
 	}
 
 
-	public void DiSpLaY(Object object) {
-		OuTpUt(object);		
+// 	public void DiSpLaY(Object object) {
+	public void display(Object object) {	// function name 'DiSpLaY' changed to 'display'
+// 		OuTpUt(object);
+		output(object);			// function name 'OuTpUt' changed to 'output'
 	}
 
 
