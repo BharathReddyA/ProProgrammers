@@ -56,15 +56,19 @@ public class BorrowBookUI {
 	}
 
 	
-	public void RuN() {
-		OuTpUt("Borrow Book Use Case UI\n");
+// 	public void RuN() {
+	public void run() {				// function name 'RuN' changed to 'run'
+// 		OuTpUt("Borrow Book Use Case UI\n");
+		output("Borrow Book Use Case UI\n");	// function name 'OuTpUt' changed to 'output'
 		
 		while (true) {
 			
-			switch (StaTe) {			
+// 			switch (StaTe) {
+			switch (state) {		// argument name 'StaTe' changed to 'state'	
 			
 			case CANCELLED:
-				OuTpUt("Borrowing Cancelled");
+// 				OuTpUt("Borrowing Cancelled");
+				output("Borrowing Cancelled");	// function name 'OuTpUt' changed to 'output'
 				return;
 
 				
