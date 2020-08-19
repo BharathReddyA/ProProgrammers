@@ -103,17 +103,23 @@ public class BorrowBookUI {
 			
 				
 			case SCANNING:
-				String BoOk_StRiNg_InPuT = iNpUT("Scan Book (<enter> completes): ");
-				if (BoOk_StRiNg_InPuT.length() == 0) {
-					CoNtRoL.CoMpLeTe();
+// 				String BoOk_StRiNg_InPuT = iNpUT("Scan Book (<enter> completes): ");
+				String bookStringInput = input("Scan Book (<enter> completes): ");	// variable name 'BoOk_StRiNg_InPuT' and function 'iNpUT' changed to 'bookStringInput' and 'input'
+// 				if (BoOk_StRiNg_InPuT.length() == 0) {
+				if (bookStringInput.length() == 0) {		// 'BoOk_StRiNg_InPuT' changed to 'bookStringInput'
+// 					CoNtRoL.CoMpLeTe();
+					control.complete();			// 'CoNtRoL' and 'CoMpLeTe' changed to 'control' and 'complete'
 					break;
 				}
 				try {
-					int BiD = Integer.valueOf(BoOk_StRiNg_InPuT).intValue();
-					CoNtRoL.ScAnNeD(BiD);
+// 					int BiD = Integer.valueOf(BoOk_StRiNg_InPuT).intValue();
+					int bookID = Integer.valueOf(bookStringInput).intValue();	// variable name 'BiD' and 'BoOk_StRiNg_InPuT' changed to 'bookID' and 'bookStringInput'
+// 					CoNtRoL.ScAnNeD(BiD);
+					control.scanned(bookID);		// 'CoNtRoL', 'ScAnNeD' and 'BiD' changed to 'control', 'scanned'and 'bookID'
 					
 				} catch (NumberFormatException e) {
-					OuTpUt("Invalid Book Id");
+// 					OuTpUt("Invalid Book Id");
+					output("Invalid Book Id");		// function name 'OuTpUt' changed to 'output'
 				} 
 				break;
 					
