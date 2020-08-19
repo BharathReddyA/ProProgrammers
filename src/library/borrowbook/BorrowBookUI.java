@@ -49,8 +49,10 @@ public class BorrowBookUI {
 	}
 	
 			
-	public void SeT_StAtE(uI_STaTe StAtE) {
-		this.StaTe = StAtE;
+// 	public void SeT_StAtE(uI_STaTe StAtE) {
+	public void setState(UIState state) {	// function name 'SeT_StAtE', its parameter type 'uI_STaTe' and name 'StAtE' changed to 'setState', 'UIState' and 'state' respectively
+// 		this.StaTe = StAtE;
+		this.state = state;		// variable name 'StaTe' and 'StAtE' changed to 'state'
 	}
 
 	
