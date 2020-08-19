@@ -95,8 +95,10 @@ public class BorrowBookUI {
 
 				
 			case RESTRICTED:
-				iNpUT("Press <any key> to cancel");
-				CoNtRoL.CaNcEl();
+// 				iNpUT("Press <any key> to cancel");
+				input("Press <any key> to cancel");		// function name 'iNpUT' changed to 'input'
+// 				CoNtRoL.CaNcEl();
+				control.cancel();				// 'CoNtRoL' and 'CaNcEl' changed to 'control' and 'cancel'
 				break;
 			
 				
