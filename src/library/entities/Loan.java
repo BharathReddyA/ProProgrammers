@@ -1,3 +1,7 @@
+// Author : Vinaykumar
+// Mediator : shubham
+// Reviewer : Nurul
+
 package library.entities;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -6,13 +10,19 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class Loan implements Serializable {
 	
-	public static enum lOaN_sTaTe { CURRENT, OVER_DUE, DISCHARGED };
+// 	public static enum lOaN_sTaTe { CURRENT, OVER_DUE, DISCHARGED };
+	public static enum lOaN_sTaTe { CURRENT, OVER_DUE, DISCHARGED };	// enum name 'lOaN_sTaTe' changed to 'LoanState'
 	
-	private int LoAn_Id;
-	private Book BoOk;
-	private Member MeMbEr;
-	private Date DaTe;
-	private lOaN_sTaTe StAtE;
+// 	private int LoAn_Id;
+	private int loanID;		// variable name 'LoAn_Id' changed to 'loanID'
+// 	private Book BoOk;
+	private Book book;		// variable name 'BoOk' changed to 'book'
+// 	private Member MeMbEr;
+	private Member member;		// variable name 'MeMbEr' changed to 'member'
+// 	private Date DaTe;
+	private Date date;		// variable name 'DaTe' changed to 'date'
+// 	private lOaN_sTaTe StAtE;
+	private LoanState state;	// variable type 'lOaN_sTaTe' and name 'StAtE' changed to 'LoanState' and 'state'
 
 	
 	public Loan(int loanId, Book bOoK, Member mEmBeR, Date DuE_dAtE) {
