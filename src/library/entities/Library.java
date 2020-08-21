@@ -34,7 +34,7 @@ public class Library implements Serializable {
 	private int loanId;
 	private Date loanDate;
 	
-	private Map<Integer, Book> CaTaLoG;
+	private Map<Integer, Book> catalog;
 	private Map<Integer, Member> MeMbErS;
 	private Map<Integer, Loan> LoAnS;
 	private Map<Integer, Loan> CuRrEnT_LoAnS;
@@ -42,7 +42,7 @@ public class Library implements Serializable {
 	
 
 	private Library() {
-		CaTaLoG = new HashMap<>();
+		catalog = new HashMap<>();
 		MeMbErS = new HashMap<>();
 		LoAnS = new HashMap<>();
 		CuRrEnT_LoAnS = new HashMap<>();
@@ -119,7 +119,7 @@ public class Library implements Serializable {
 
 
 	public List<Book> lIsT_BoOkS() {		
-		return new ArrayList<Book>(CaTaLoG.values()); 
+		return new ArrayList<Book>(catalog.values()); 
 	}
 
 
@@ -137,7 +137,7 @@ public class Library implements Serializable {
 	
 	public Book aDd_BoOk(String a, String t, String c) {		
 		Book b = new Book(a, t, c, gEt_NeXt_bookId());
-		CaTaLoG.put(b.gEtId(), b);		
+		catalog.put(b.gEtId(), b);		
 		return b;
 	}
 
@@ -150,8 +150,8 @@ public class Library implements Serializable {
 
 	
 	public Book gEt_BoOk(int bookId) {
-		if (CaTaLoG.containsKey(bookId)) 
-			return CaTaLoG.get(bookId);		
+		if (catalog.containsKey(bookId)) 
+			return catalog.get(bookId);		
 		return null;
 	}
 
