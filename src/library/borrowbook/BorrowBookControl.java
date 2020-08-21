@@ -1,7 +1,11 @@
+//Author: Bharath
+//Mediator : Vinay
+//Reviewer : Shubham
+
 package library.borrowbook;
 import java.util.ArrayList;
 import java.util.List;
-		//test1
+
 import library.entities.Book;
 import library.entities.Library;
 import library.entities.Loan;
@@ -17,7 +21,7 @@ public class BorrowBookControl {
 	private ControlState state;
 	
 	private List<Book> pendingList;
-	private List<Loan> CompletedList;
+	private List<Loan> completedList;
 	private Book book;
 	
 	
@@ -37,9 +41,9 @@ public class BorrowBookControl {
 	}
 
 		
-	public void Swiped(int memberId) {
+	public void swiped(int memberId) {
 		if (!state.equals(ControlState.READY)) 
-			throw new RuntimeException("BorrowBookControl: cannot call cardSwiped except in READY state");
+			throw new RuntimeException("BorrowBookControl: cannot call cardswiped except in READY state");
 			
 		member = library.getMember(memberId);
 		if (member == null) {
@@ -92,23 +96,23 @@ public class BorrowBookControl {
 			for (Book book : pendingList) 
 				ui.Display(book.toString());
 			
-			CompletedList = new ArrayList<Loan>();
+			completedList = new ArrayList<Loan>();
 			ui.setState(BorrowBookUI.UiState.FINALISING);
 			state = ControlState.FINALISING;
 		}
 	}
 
 
-	public void CommitLoans() {
+	public void commitLoans() {
 		if (!state.equals(ControlState.FINALISING)) 
 			throw new RuntimeException("BorrowBookControl: cannot call commitLoans except in FINALISING state");
 			
 		for (Book B : pendingList) {
 			Loan loan = library.issueLoan(B, member);
-			CompletedList.add(loan);			
+			completedList.add(loan);			
 		}
 		ui.Display("Completed Loan Slip");
-		for (Loan LOAN : CompletedList) 
+		for (Loan LOAN : completedList) 
 			ui.Display(LOAN.toString());
 		
 		ui.setState(BorrowBookUI.UiState.COMPLETED);
