@@ -5,12 +5,16 @@ import library.entities.Member;
 // public class pAY_fINE_cONTROL {
 public class PayFineControl {		// class name 'pAY_fINE_cONTROL' changed to 'PayFineControl'
 	
-	private PayFineUI Ui;
-	private enum cOnTrOl_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
-	private cOnTrOl_sTaTe StAtE;
-	
-	private Library LiBrArY;
-	private Member MeMbEr;
+// 	private PayFineUI Ui;
+	private PayFineUI ui;			// variable name 'Ui' changed to 'ui'
+// 	private enum cOnTrOl_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
+	private enum ControlState { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };	// enum name 'cOnTrOl_sTaTe' changed to 'ControlState'
+// 	private cOnTrOl_sTaTe StAtE;
+	private ControlState state;		// variable type 'cOnTrOl_sTaTe' and name 'StAtE' changed to 'ControlState' and 'state'
+// 	private Library LiBrArY;
+	private Library library;		// variable name 'LiBrArY' changed to 'library'
+// 	private Member MeMbEr;
+	private Member member;			// variable name 'MeMbEr' changed to 'member'
 
 
 	public pAY_fINE_cONTROL() {
