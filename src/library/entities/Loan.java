@@ -52,18 +52,24 @@ public class Loan implements Serializable {
 	}
 
 	
-	public boolean Is_OvEr_DuE() {
-		return StAtE == lOaN_sTaTe.OVER_DUE;
+// 	public boolean Is_OvEr_DuE() {
+	public boolean isOverDue() {			// function name 'Is_OvEr_DuE' changed to 'isOverDue'
+// 		return StAtE == lOaN_sTaTe.OVER_DUE;
+		return state == loanState.OVER_DUE;	// variable names 'StAtE' and 'lOaN_sTaTe' changed to 'state' and 'loanState'
 	}
 
 	
-	public Integer GeT_Id() {
-		return LoAn_Id;
+// 	public Integer GeT_Id() {
+	public Integer getID() {			// function name 'GeT_Id' changed to 'getID'
+// 		return LoAn_Id;
+		return loanID;				// variable name 'LoAn_Id' changed to 'loanID'
 	}
 
 
-	public Date GeT_DuE_DaTe() {
-		return DaTe;
+// 	public Date GeT_DuE_DaTe() {
+	public Date getDueDate() {			// function name 'GeT_DuE_DaTe' changed to 'getDueDate'
+// 		return DaTe;
+		return date;				// variable name 'DaTe' changed to 'date'
 	}
 	
 	
