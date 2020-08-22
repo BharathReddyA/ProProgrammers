@@ -73,18 +73,28 @@ public class Loan implements Serializable {
 	}
 	
 	
-	public String toString() {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	public String toString() {	
+// 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");	// variable name 'sdf' changed to 'simpleDateFormat'
 
-		StringBuilder sb = new StringBuilder();
-		sb.append("Loan:  ").append(LoAn_Id).append("\n")
-		  .append("  Borrower ").append(MeMbEr.GeT_ID()).append(" : ")
-		  .append(MeMbEr.GeT_LaSt_NaMe()).append(", ").append(MeMbEr.GeT_FiRsT_NaMe()).append("\n")
-		  .append("  Book ").append(BoOk.gEtId()).append(" : " )
-		  .append(BoOk.gEtTiTlE()).append("\n")
-		  .append("  DueDate: ").append(sdf.format(DaTe)).append("\n")
-		  .append("  State: ").append(StAtE);		
-		return sb.toString();
+// 		StringBuilder sb = new StringBuilder();
+		StringBuilder stringBuilder = new StringBuilder();					// variable name 'sb' changed to 'stringBuilder'
+// 		sb.append("Loan:  ").append(LoAn_Id).append("\n")
+// 		  .append("  Borrower ").append(MeMbEr.GeT_ID()).append(" : ")
+// 		  .append(MeMbEr.GeT_LaSt_NaMe()).append(", ").append(MeMbEr.GeT_FiRsT_NaMe()).append("\n")
+// 		  .append("  Book ").append(BoOk.gEtId()).append(" : " )
+// 		  .append(BoOk.gEtTiTlE()).append("\n")
+// 		  .append("  DueDate: ").append(sdf.format(DaTe)).append("\n")
+// 		  .append("  State: ").append(StAtE);
+		stringBuilder.append("Loan:  ").append(loanID).append("\n")						// variables name 'LoAn_Id', 'sdf', 'DaTe', 'StAtE', 'MeMbEr' and 'BoOk'changed to 
+		  .append("  Borrower ").append(member.getID()).append(" : ")					// 	'loanID', 'simpleDateFormat', 'date', 'state', 'member' and 'book'
+		  .append(member.getLastName()).append(", ").append(member.getFirstName()).append("\n")	// methods name 'GeT_ID', 'GeT_LaSt_NaMe', 'GeT_FiRsT_NaMe', 'gEtId', gEtTiTlE
+		  .append("  Book ").append(book.getID()).append(" : " )					//	changed to 'getID', 'getLastName', 'getFirstName', 'getID', 'getTitle'
+		  .append(book.getTitle()).append("\n")
+		  .append("  DueDate: ").append(simpleDateFormat.format(date)).append("\n")
+		  .append("  State: ").append(state);		
+// 		return sb.toString();
+		return stringBuilder.toString();				// variable name 'sb' changed to 'stringBuilder'
 	}
 
 
