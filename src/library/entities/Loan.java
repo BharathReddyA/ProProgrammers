@@ -25,12 +25,18 @@ public class Loan implements Serializable {
 	private LoanState state;	// variable type 'lOaN_sTaTe' and name 'StAtE' changed to 'LoanState' and 'state'
 
 	
-	public Loan(int loanId, Book bOoK, Member mEmBeR, Date DuE_dAtE) {
-		this.LoAn_Id = loanId;
-		this.BoOk = bOoK;
-		this.MeMbEr = mEmBeR;
-		this.DaTe = DuE_dAtE;
-		this.StAtE = lOaN_sTaTe.CURRENT;
+// 	public Loan(int loanId, Book bOoK, Member mEmBeR, Date DuE_dAtE) {
+	public Loan(int loanID, Book book, Member member, Date dueDate) {	// variables 'loanId', 'bOoK', 'mEmBeR' and 'DuE_dAtE' changed to 'loanID', 'book', 'member' and 'dueDate'
+// 		this.LoAn_Id = loanId;
+		this.loanID = loanID;			// variable name 'LoAn_Id' and 'loanId' changed to 'loanID' 
+// 		this.BoOk = bOoK;
+		this.book = book;			// variable name 'BoOk' and 'bOok' changed to 'book' 
+// 		this.MeMbEr = mEmBeR;
+		this.member = member;			// variable name 'MeMbEr' and 'mEmBeR' changed to 'member' 
+// 		this.DaTe = DuE_dAtE;
+		this.date = dueDate;			// variable name 'DaTe' and 'DuE_dAtE' changed to 'date' and 'dueDate' 
+// 		this.StAtE = lOaN_sTaTe.CURRENT;
+		this.state = loanState.CURRENT;		// variable name 'StAtE' and 'lOaN_sTaTe' changed to 'state' and 'loanState' 
 	}
 
 	
