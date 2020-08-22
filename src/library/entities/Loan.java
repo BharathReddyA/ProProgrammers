@@ -86,9 +86,9 @@ public class Loan implements Serializable {
 // 		  .append(BoOk.gEtTiTlE()).append("\n")
 // 		  .append("  DueDate: ").append(sdf.format(DaTe)).append("\n")
 // 		  .append("  State: ").append(StAtE);
-		stringBuilder.append("Loan:  ").append(loanID).append("\n")						// variables name 'LoAn_Id', 'sdf', 'DaTe', 'StAtE', 'MeMbEr' and 'BoOk'changed to 
+		stringBuilder.append("Loan:  ").append(loanID).append("\n")					// variables name 'LoAn_Id', 'sdf', 'DaTe', 'StAtE', 'MeMbEr' and 'BoOk'changed to 
 		  .append("  Borrower ").append(member.getID()).append(" : ")					// 	'loanID', 'simpleDateFormat', 'date', 'state', 'member' and 'book'
-		  .append(member.getLastName()).append(", ").append(member.getFirstName()).append("\n")	// methods name 'GeT_ID', 'GeT_LaSt_NaMe', 'GeT_FiRsT_NaMe', 'gEtId', gEtTiTlE
+		  .append(member.getLastName()).append(", ").append(member.getFirstName()).append("\n")		// methods name 'GeT_ID', 'GeT_LaSt_NaMe', 'GeT_FiRsT_NaMe', 'gEtId', gEtTiTlE
 		  .append("  Book ").append(book.getID()).append(" : " )					//	changed to 'getID', 'getLastName', 'getFirstName', 'getID', 'getTitle'
 		  .append(book.getTitle()).append("\n")
 		  .append("  DueDate: ").append(simpleDateFormat.format(date)).append("\n")
@@ -98,18 +98,24 @@ public class Loan implements Serializable {
 	}
 
 
-	public Member GeT_MeMbEr() {
-		return MeMbEr;
+// 	public Member GeT_MeMbEr() {
+	public Member getMember() {			// function name 'GeT_MeMbEr' changed to 'getMember'
+// 		return MeMbEr;
+		return member;				// variable name 'MeMbEr' changed to 'member'
 	}
 
 
-	public Book GeT_BoOk() {
-		return BoOk;
+// 	public Book GeT_BoOk() {
+	public Book getBook() {			// function name 'GeT_BoOk' changed to 'getBook'
+// 		return BoOk;
+		return book;				// variable name 'BoOk' changed to 'book'
 	}
 
 
-	public void DiScHaRgE() {
-		StAtE = lOaN_sTaTe.DISCHARGED;		
+// 	public void DiScHaRgE() {
+	public void discharge() {			// function name 'DiScHaRgE' changed to 'discharge'
+// 		StAtE = lOaN_sTaTe.DISCHARGED;
+		StAtE = loanState.DISCHARGED;		// variable name 'lOaN_sTaTe' changed to 'loanState'
 	}
 
 }
