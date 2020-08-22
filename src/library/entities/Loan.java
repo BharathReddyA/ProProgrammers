@@ -40,10 +40,14 @@ public class Loan implements Serializable {
 	}
 
 	
-	public void cHeCk_OvEr_DuE() {
-		if (StAtE == lOaN_sTaTe.CURRENT &&
-			Calendar.gEtInStAnCe().gEt_DaTe().after(DaTe)) 
-			this.StAtE = lOaN_sTaTe.OVER_DUE;			
+// 	public void cHeCk_OvEr_DuE() {
+	public void checkOverDue() {					// function name 'cHeCk_OvEr_DuE' changed to 'checkOverDue'
+// 		if (StAtE == lOaN_sTaTe.CURRENT &&
+// 			Calendar.gEtInStAnCe().gEt_DaTe().after(DaTe)) 
+		if (state == loanState.CURRENT &&			// variable 'StAtE', 'lOaN_sTaTe', 'DaTe' changed to 'state', 'loanState', 'date' and functions name 
+			Calendar.getInstance().getDate().after(date))	// 'gEtInStAnCe' and 'gEt_DaTe' changed to 'getInstance' and 'gateDate'
+// 			this.StAtE = lOaN_sTaTe.OVER_DUE;
+			this.state = loanState.OVER_DUE;		// variable name 'StAtE' and 'lOaN_sTaTe' changed to 'state' and 'loanState'
 		
 	}
 
