@@ -17,9 +17,12 @@ public class PayFineControl {		// class name 'pAY_fINE_cONTROL' changed to 'PayF
 	private Member member;			// variable name 'MeMbEr' changed to 'member'
 
 
-	public pAY_fINE_cONTROL() {
-		this.LiBrArY = Library.GeTiNsTaNcE();
-		StAtE = cOnTrOl_sTaTe.INITIALISED;
+// 	public pAY_fINE_cONTROL() {
+	public PayFineControl() {			// constructor name 'pAY_fINE_cONTROL' changed to 'PayFineControl'
+// 		this.LiBrArY = Library.GeTiNsTaNcE();
+		this.library = Library.getInstance();	// variable name 'LiBrArY' and 'Library' changed to 'library' and method name 'GeTiNsTaNcE' changed to 'getInstance'
+// 		StAtE = cOnTrOl_sTaTe.INITIALISED;
+		state = controlState.INITIALISED;	// variable name 'StAtE' changed to 'state' and enum name 'cOnTrOl_sTaTe' changed to 'controlState'
 	}
 	
 	
