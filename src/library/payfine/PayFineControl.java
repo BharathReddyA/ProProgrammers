@@ -26,13 +26,18 @@ public class PayFineControl {		// class name 'pAY_fINE_cONTROL' changed to 'PayF
 	}
 	
 	
-	public void SeT_uI(PayFineUI uI) {
-		if (!StAtE.equals(cOnTrOl_sTaTe.INITIALISED)) {
+// 	public void SeT_uI(PayFineUI uI) {
+	public void setUI(PayFineUI ui) {				// function name 'SeT_uI' and parameter variable name 'uI' changed to 'setUI' and 'ui'
+// 		if (!StAtE.equals(cOnTrOl_sTaTe.INITIALISED)) {
+		if (!state.equals(ControlState.INITIALISED)) {		// variable name 'StAtE' and enum name 'cOnTrOl_sTaTe' changed to 'state', 'ControlState'
 			throw new RuntimeException("PayFineControl: cannot call setUI except in INITIALISED state");
 		}	
-		this.Ui = uI;
-		uI.SeT_StAtE(PayFineUI.uI_sTaTe.READY);
-		StAtE = cOnTrOl_sTaTe.READY;		
+// 		this.Ui = uI;
+		this.Ui = ui;					// variable name 'uI' changed to 'ui'
+// 		uI.SeT_StAtE(PayFineUI.uI_sTaTe.READY);
+		ui.setState(PayFineUI.uiState.READY);		// variable name 'uI', 'uI_sTaTe'  and method name 'SeT_StAtE' changed to 'ui', 'uiState' and 'setState'
+// 		StAtE = cOnTrOl_sTaTe.READY;		
+		state = ControlState.READY;			// variable name 'StAtE' and enum name 'cOnTrOl_sTaTe' changed to 'state' and 'ControlState'
 	}
 
 
