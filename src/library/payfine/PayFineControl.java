@@ -74,18 +74,27 @@ public class PayFineControl {		// class name 'pAY_fINE_cONTROL' changed to 'PayF
 	}
 
 
-	public double PaY_FiNe(double AmOuNt) {
-		if (!StAtE.equals(cOnTrOl_sTaTe.PAYING)) 
+// 	public double PaY_FiNe(double AmOuNt) {
+	public double payFine(double amount) {			// function name 'PaY_FiNe' and its parameter variable name 'AmOuNt' changed to 'payFine' and 'amount'
+// 		if (!StAtE.equals(cOnTrOl_sTaTe.PAYING)) 
+		if (!state.equals(ControlState.PAYING)) 	// variable name 'StAtE' and enum name 'cOnTrOl_sTaTe' changed to 'state' and 'ControlState'
 			throw new RuntimeException("PayFineControl: cannot call payFine except in PAYING state");
 			
-		double ChAnGe = MeMbEr.PaY_FiNe(AmOuNt);
-		if (ChAnGe > 0) 
-			Ui.DiSplAY(String.format("Change: $%.2f", ChAnGe));
+// 		double ChAnGe = MeMbEr.PaY_FiNe(AmOuNt);
+		double change = member.payFine(amount);		// variable name 'ChAnGe', 'MeMbEr', 'AmOuNt' and method 'PaY_FiNe' changed to 'change', 'member', 'amount' and 'payFine'
+// 		if (ChAnGe > 0) 
+		if (change > 0) 				// variable name 'ChAnGe' changed to 'change'
+// 			Ui.DiSplAY(String.format("Change: $%.2f", ChAnGe));
+			ui.display(String.format("Change: $%.2f", change));	// variable 'Ui', 'ChAnGe' and method 'DiSplAY' changed to 'ui', 'change' and 'display'
 		
-		Ui.DiSplAY(MeMbEr.toString());
-		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.COMPLETED);
-		StAtE = cOnTrOl_sTaTe.COMPLETED;
-		return ChAnGe;
+// 		Ui.DiSplAY(MeMbEr.toString());
+		ui.display(member.toString());			// variable 'Ui' and method 'DiSplAY' changed to 'ui' and 'display'
+// 		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.COMPLETED);
+		ui.setState(PayFineUI.uiState.COMPLETED);	// variable 'Ui', 'uI_sTaTe'  and method 'SeT_StAtE', changed to 'ui', 'uiState' and 'setState'
+// 		StAtE = cOnTrOl_sTaTe.COMPLETED;
+		state = ControlState.COMPLETED;			// variable name 'StAtE' and enum name 'cOnTrOl_sTaTe' changed to 'state', 'ControlState'
+// 		return ChAnGe;
+		return change;					// variable name 'ChAnGe' changed to 'change'
 	}
 	
 
