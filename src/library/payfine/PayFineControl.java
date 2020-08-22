@@ -65,9 +65,12 @@ public class PayFineControl {		// class name 'pAY_fINE_cONTROL' changed to 'PayF
 	}
 	
 	
-	public void CaNcEl() {
-		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.CANCELLED);
-		StAtE = cOnTrOl_sTaTe.CANCELLED;
+// 	public void CaNcEl() {
+	public void cancel() {					// function name 'CaNcEl' changed to 'cancel'
+// 		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.CANCELLED);
+		ui.setState(PayFineUI.uiState.CANCELLED);	// variable name 'Ui', 'uI_sTaTe' and function name 'SeT_StAtE' changed to 'ui, 'uiState' and 'setState'
+// 		StAtE = cOnTrOl_sTaTe.CANCELLED;
+		state = ControlState.CANCELLED;			// variable name 'StAtE' and enum name 'cOnTrOl_sTaTe' changed to 'state' and 'ControlState'
 	}
 
 
