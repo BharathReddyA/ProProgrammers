@@ -2,7 +2,8 @@ package library.payfine;
 import library.entities.Library;
 import library.entities.Member;
 
-public class pAY_fINE_cONTROL {
+// public class pAY_fINE_cONTROL {
+public class PayFineControl {		// class name 'pAY_fINE_cONTROL' changed to 'PayFineControl'
 	
 	private PayFineUI Ui;
 	private enum cOnTrOl_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
