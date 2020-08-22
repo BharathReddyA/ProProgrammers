@@ -41,19 +41,27 @@ public class PayFineControl {		// class name 'pAY_fINE_cONTROL' changed to 'PayF
 	}
 
 
-	public void CaRd_sWiPeD(int MeMbEr_Id) {
-		if (!StAtE.equals(cOnTrOl_sTaTe.READY)) 
+// 	public void CaRd_sWiPeD(int MeMbEr_Id) {		
+	public void cardSwiped(int memberID) {			// function name 'CaRd_sWiPeD' and parameter variable name 'MeMbEr_Id' changed to 'cardSwiped' and 'memberID'
+// 		if (!StAtE.equals(cOnTrOl_sTaTe.READY)) 
+		if (!state.equals(ControlState.READY)) 		// variable name 'StAtE' and enum name 'cOnTrOl_sTaTe' changed to 'state' and 'ControlState'
 			throw new RuntimeException("PayFineControl: cannot call cardSwiped except in READY state");
 			
-		MeMbEr = LiBrArY.gEt_MeMbEr(MeMbEr_Id);
-		
-		if (MeMbEr == null) {
-			Ui.DiSplAY("Invalid Member Id");
+// 		MeMbEr = LiBrArY.gEt_MeMbEr(MeMbEr_Id);
+		member = library.getMember(memberID);		// variable 'MeMbEr', 'LiBrArY', 'MeMbEr_Id' changed to 'member', 'library', 'memberID' and 
+								//	method name 'gEt_MeMbEr' changed to 'getMember'
+// 		if (MeMbEr == null) {
+		if (member == null) {				// variable name 'MeMbEr' changed to 'member'
+// 			Ui.DiSplAY("Invalid Member Id");
+			ui.display("Invalid Member Id");	// variable 'Ui' and method name 'DiSplAY' changed to 'ui' and 'display'
 			return;
 		}
-		Ui.DiSplAY(MeMbEr.toString());
-		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.PAYING);
-		StAtE = cOnTrOl_sTaTe.PAYING;
+// 		Ui.DiSplAY(MeMbEr.toString());
+		ui.display(member.toString());			// variable name 'Ui', 'MeMbEr' and method name 'DiSplAY' changed to 'ui', 'member' and 'display'
+// 		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.PAYING);
+		ui.setState(PayFineUI.uiState.PAYING);		// variable name 'Ui', 'uI_sTaTe' and method name 'SeT_StAtE' changed to  'ui', 'uiState', and 'setState'
+// 		StAtE = cOnTrOl_sTaTe.PAYING;
+		state = ControlState.PAYING;			// variable name 'StAtE' and enum name 'cOnTrOl_sTaTe' changed to 'state' and 'ControlState'
 	}
 	
 	
