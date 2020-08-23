@@ -14,8 +14,7 @@ public class Calendar {
 	private static java.util.Calendar calender;
 	
 	
-	private Calendar() 
-	{
+	private Calendar() {
 		//cAlEnDaR = java.util.Calendar.getInstance();
 		calender = java.util.Calendar.getInstance();
 	}
