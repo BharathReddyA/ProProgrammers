@@ -212,11 +212,14 @@ public class Main {
 
 
 
-	private static void BORROW_BOOK() {
+// 	private static void BORROW_BOOK() {
+	private static void borrowBook() {				// function name 'BORROW_BOOK' changed to 'borrowBook'
 
-		new BorrowBookUI(new BorrowBookControl()).RuN();		
+// 		new BorrowBookUI(new BorrowBookControl()).RuN();		
+		new BorrowBookUI(new BorrowBookControl()).run();	// method name 'RUN' changed to 'run'	
 
-		new BorrowBookUI(new bORROW_bOOK_cONTROL()).RuN();		
+// 		new BorrowBookUI(new bORROW_bOOK_cONTROL()).RuN();	// duplicate code removed
+
 
 	}
 
