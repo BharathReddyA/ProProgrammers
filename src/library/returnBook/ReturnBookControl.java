@@ -104,9 +104,8 @@ public class ReturnBookControl {
 	//public void sCaNnInG_cOmPlEtE() 
 	public void scanningComplete() {
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.READY)) 
-		if (!state.equals(ControlState.READY)) 
+		if (!state.equals(ControlState.READY)){
 			//throw new RuntimeException("ReturnBookControl: cannot call scanningComplete except in READY state");
-			{
 			throw new RuntimeException("ReturnBookControl: cannot call scanningComplete except in READY state");
 			}
 			
