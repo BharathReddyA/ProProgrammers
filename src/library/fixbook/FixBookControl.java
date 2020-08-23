@@ -49,8 +49,7 @@ public class FixBookControl {
 
 
 	//public void BoOk_ScAnNeD(int BoOkId) {
-	public void BookScanned(int BookId) 
-	{
+	public void BookScanned(int BookId) {
 		//if (!StAtE.equals(CoNtRoL_StAtE.READY))
 		if (!state.equals(ControlState.READY)) 
 			//throw new RuntimeException("FixBookControl: cannot call bookScanned except in READY state");
