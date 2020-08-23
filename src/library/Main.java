@@ -23,11 +23,16 @@ import library.returnBook.rETURN_bOOK_cONTROL;
 
 public class Main {
 	
-	private static Scanner IN;
-	private static Library LIB;
-	private static String MENU;
-	private static Calendar CAL;
-	private static SimpleDateFormat SDF;
+// 	private static Scanner IN;
+	private static Scanner input;			// variable name 'IN' changed to 'input'
+// 	private static Library LIB;
+	private static Library library;			// variable name 'LIB; changed to 'library'
+// 	private static String MENU;
+	private static String menu;			// variable name 'MENU' changed to 'menu'
+// 	private static Calendar CAL;
+	private static Calendar calendar;			// variable name 'CAL' changed to 'calendar'
+// 	private static SimpleDateFormat SDF;
+	private static SimpleDateFormat simpleDateFormat;	// variable name 'SDF' changed to 'simpleDateFormat'
 	
 	
 	private static String Get_menu() {
