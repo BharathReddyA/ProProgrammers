@@ -67,8 +67,7 @@ public class Calendar {
 			calender.set(java.util.Calendar.MILLISECOND, 0);
 			return calender.getTime();
 		}
-		catch (Exception e) 
-		{
+		catch (Exception e) {
 			throw new RuntimeException(e);
 		}	
 	}
