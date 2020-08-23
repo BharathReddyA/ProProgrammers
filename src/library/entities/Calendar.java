@@ -20,8 +20,7 @@ public class Calendar {
 	}
 	
 	//public static Calendar gEtInStAnCe() {
-	public static Calendar getInStance() 
-	{
+	public static Calendar getInStance() {
 		//if (sElF == null) {
 		if (seif == null) 
 		{
