@@ -66,8 +66,7 @@ public class FixBookControl {
 			return;
 		}
 		//if (!CuRrEnT_BoOk.iS_DaMaGeD()) 
-		if (!currentBook.isDamaged()) 
-		{
+		if (!currentBook.isDamaged()) {
 			//Ui.dIsPlAy("Book has not been damaged");
 			ui.display("Book has not been damaged");
 			return;
