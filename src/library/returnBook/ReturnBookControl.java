@@ -37,8 +37,8 @@ public class ReturnBookControl {
 	//public void sEt_uI(ReturnBookUI ui)
 	public void setUi(ReturnBookUi ui){
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.INITIALISED)) 
-		if (!state.equals(ControlState .INITIALISED)) 
-			//throw new RuntimeException("ReturnBookControl: cannot call setUI except in INITIALISED state");{
+		if (!state.equals(ControlState .INITIALISED)) {
+			//throw new RuntimeException("ReturnBookControl: cannot call setUI except in INITIALISED state");
 			throw new RuntimeException("ReturnBookControl: cannot call setUI except in INITIALISED state");
 			}
 		//this.Ui = uI;
@@ -53,8 +53,8 @@ public class ReturnBookControl {
 	//public void bOoK_sCaNnEd(int bOoK_iD) 
 	public void bookScanned(int bookId){
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.READY)) 
-		if (!state.equals(ControlState.READY)) 
-			//throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");{
+		if (!state.equals(ControlState.READY)) {
+			//throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");
 			throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");
 			}
 		
