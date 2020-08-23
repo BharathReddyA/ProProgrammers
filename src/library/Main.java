@@ -23,6 +23,9 @@ import library.fixbook.FixBookUI;
 //Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookUi ]
 //[RIVIEW]
 import library.fixbook.fIX_bOOK_cONTROL;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookControl ]
+//[RIVIEW]
 import library.payfine.PayFineUI;
 import library.payfine.pAY_fINE_cONTROL;
 import library.returnBook.ReturnBookUI;
