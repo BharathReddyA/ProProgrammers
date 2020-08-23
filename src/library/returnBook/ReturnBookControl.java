@@ -94,6 +94,7 @@ public class ReturnBookControl {
 		if (CurrentLoan.IsOverDue()) {
 			//Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
 			ui.display(String.format("\nOverdue fine : $%.2f", OverDueFine));
+		}
 		
 		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
 		ui.setState(ReturnBookUI.uiState.INSPECTING);
