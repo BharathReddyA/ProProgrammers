@@ -9,8 +9,7 @@ import library.entities.Library;
 import library.entities.Loan;
 
 //public class rETURN_bOOK_cONTROL {
-public class ReturnBookControl 
-{
+public class ReturnBookControl {
 
 
 	//private ReturnBookUI Ui;
