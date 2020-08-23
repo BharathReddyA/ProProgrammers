@@ -89,7 +89,7 @@ public class Main {
 			}
 						
 // 			MENU = Get_menu();
-			MENU = getMenu();				// variable name 'MENU' and function name 'Get_menu' changd to 'menu' and 'getMenu'
+			menu = getMenu();				// variable name 'MENU' and function name 'Get_menu' changd to 'menu' and 'getMenu'
 			
 			boolean e = false;
 			
@@ -101,22 +101,26 @@ public class Main {
 				String string = input(menu);				// variable name 'c', 'MENU' changed to 'string' and 'menu'
 				
 // 				switch (c.toUpperCase()) {
-				switch (string.toUpperCase()) {				// variable name 'c' changed to 'string'
+				switch (string.toUpperCase()) {		// variable name 'c' changed to 'string'
 				
 				case "M": 
-					ADD_MEMBER();
+// 					ADD_MEMBER();
+					ADD_MEMBER();			// function name 'ADD_MEMBER' changed to 'addMember'	
 					break;
 					
 				case "LM": 
-					LIST_MEMBERS();
+// 					LIST_MEMBERS();
+					LIST_MEMBERS();			// function name 'LIST_MEMBERS' changed to 'listMember'
 					break;
 					
 				case "B": 
-					ADD_BOOK();
+// 					ADD_BOOK();
+					ADD_BOOK();			// function name 'ADD_BOOK' changed to 'addBook'
 					break;
 					
 				case "LB": 
-					LIST_BOOKS();
+// 					LIST_BOOKS();
+					LIST_BOOKS();			// function name 'LIST_BOOKS' changed to 'listBooks'
 					break;
 					
 				case "FB": 
