@@ -68,8 +68,7 @@ public class ReturnBookControl {
 			return;
 		}
 		//if (!cUrReNt_bOoK.iS_On_LoAn()) 
-		if (!CurrentBook.isOnLoan()) 
-		{
+		if (!CurrentBook.isOnLoan()) {
 			//Ui.DiSpLaY("Book has not been borrowed");
 			ui.display("Book has not been borrowed");
 			return;
