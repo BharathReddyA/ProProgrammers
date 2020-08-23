@@ -23,8 +23,7 @@ public class FixBookControl {
 
 
 	//public fIX_bOOK_cONTROL() {
-	public FixBookControl() 
-	{
+	public FixBookControl() {
 		//this.LiBrArY = Library.GeTiNsTaNcE();
 		this.libary = Library.GetInstance();
 		//StAtE = CoNtRoL_StAtE.INITIALISED;
