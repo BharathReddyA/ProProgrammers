@@ -62,8 +62,7 @@ public class ReturnBookControl {
 		Book CurrentBook = libary.getBook(bookId);
 		
 		//if (cUrReNt_bOoK == null) 
-		if (CurrentBook == null) 
-		{
+		if (CurrentBook == null) {
 			//Ui.DiSpLaY("Invalid Book Id");
 			ui.display("Invalid Book Id");
 			return;
