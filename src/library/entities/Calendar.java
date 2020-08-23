@@ -55,8 +55,7 @@ public class Calendar {
 	}
 	//public synchronized Date gEt_DaTe() {
 	public synchronized Date getDate() {
-		try 
-		{
+		try {
 	        /*cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
 	        cAlEnDaR.set(java.util.Calendar.MINUTE, 0);  
 	        cAlEnDaR.set(java.util.Calendar.SECOND, 0);  
