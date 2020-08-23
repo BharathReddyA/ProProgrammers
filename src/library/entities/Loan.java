@@ -12,6 +12,11 @@ public class Loan implements Serializable {
 	
 // 	public static enum lOaN_sTaTe { CURRENT, OVER_DUE, DISCHARGED };
 	public static enum lOaN_sTaTe { CURRENT, OVER_DUE, DISCHARGED };	// enum name 'lOaN_sTaTe' changed to 'LoanState'
+
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE ]
+//[RIVIEW]
+	
 	
 // 	private int LoAn_Id;
 	private int loanID;		// variable name 'LoAn_Id' changed to 'loanID'
@@ -116,6 +121,9 @@ public class Loan implements Serializable {
 	public void discharge() {			// function name 'DiScHaRgE' changed to 'discharge'
 // 		StAtE = lOaN_sTaTe.DISCHARGED;
 		StAtE = loanState.DISCHARGED;		// variable name 'lOaN_sTaTe' changed to 'loanState'
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE  should be state]
+//[RIVIEW]
 	}
 
 }
