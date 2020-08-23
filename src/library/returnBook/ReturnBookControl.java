@@ -81,6 +81,7 @@ public class ReturnBookControl {
 		if (CurrentLoan.IsOverDue()) {
 			//Over_Due_Fine = lIbRaRy.CaLcUlAtE_OvEr_DuE_FiNe(CurrENT_loan);
 			OverDueFine = libary.calculateOverDueFine(CurrentLoan);
+		}
 		
 		//Ui.DiSpLaY("Inspecting");
 		ui.display("Inspecting");
