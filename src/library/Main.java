@@ -172,9 +172,11 @@ public class Main {
 	}	
 
 	
-	private static void PAY_FINES() {
-		new PayFineUI(new pAY_fINE_cONTROL()).RuN();		
-	}
+// 	private static void PAY_FINES() {
+	private static void payFines() {				// fnction name 'PAY_FINES' changed to 'payFines'
+// 		new PayFineUI(new pAY_fINE_cONTROL()).RuN();		
+		new PayFineUI(new PayFineControl()).run();		// constructors name 'pAY_fINE_cONTROL' changed to 'PayFineControl' and
+	}								//	method name 'RUN' changed to 'run'
 
 
 	private static void LIST_CURRENT_LOANS() {
