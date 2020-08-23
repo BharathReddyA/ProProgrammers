@@ -67,10 +67,14 @@ public class Main {
 
 	public static void main(String[] args) {		
 		try {			
-			IN = new Scanner(System.in);
-			LIB = Library.GeTiNsTaNcE();
-			CAL = Calendar.gEtInStAnCe();
-			SDF = new SimpleDateFormat("dd/MM/yyyy");
+// 			IN = new Scanner(System.in);
+			IN = new Scanner(System.in);			// variable name 'IN' changed to 'input'		
+// 			LIB = Library.GeTiNsTaNcE();
+			LIB = Library.GeTiNsTaNcE();			// variable name 'LIB; changed to 'library' and method name 'GeTiNsTaNcE' changed to 'getInstance'
+// 			CAL = Calendar.gEtInStAnCe();
+			CAL = Calendar.gEtInStAnCe();			// variable name 'CAL' changed to 'calendar' and method name 'gEtInStAnCe' changed to 'getInstance'
+// 			SDF = new SimpleDateFormat("dd/MM/yyyy");
+			SDF = new SimpleDateFormat("dd/MM/yyyy");	// variable name 'SDF' changed to 'simpleDateFormat'
 	
 			for (Member m : LIB.lIsT_MeMbErS()) {
 				output(m);
