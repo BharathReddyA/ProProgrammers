@@ -296,7 +296,8 @@ public class Main {
 
 	private static String input(String prompt) {
 		System.out.print(prompt);
-		return IN.nextLine();
+// 		return IN.nextLine();
+		return input.nextLine();				// variable name 'IN' changed to 'input'
 	}
 	
 	
