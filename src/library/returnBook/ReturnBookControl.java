@@ -26,8 +26,7 @@ public class ReturnBookControl {
 	
 
 	//public rETURN_bOOK_cONTROL() {
-	public ReturnBookControl() 
-	{
+	public ReturnBookControl() {
 		//this.lIbRaRy = Library.GeTiNsTaNcE();
 		this.libary = Library.GetInstance();
 		//sTaTe = cOnTrOl_sTaTe.INITIALISED;
