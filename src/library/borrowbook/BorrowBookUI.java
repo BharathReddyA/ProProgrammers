@@ -8,9 +8,15 @@ import java.util.Scanner;
 //Reviewer : Nurul
 
 public class BorrowBookUI {
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be Ui]
+//[RIVIEW]
 	
 // 	public static enum uI_STaTe { INITIALISED, READY, RESTRICTED, SCANNING, IDENTIFIED, FINALISING, COMPLETED, CANCELLED };
 	public static enum UIState { INITIALISED, READY, RESTRICTED, SCANNING, IDENTIFIED, FINALISING, COMPLETED, CANCELLED };	// enum name 'uI_STaTe' changed to 'UIState'
+//[RIVIEW]
+	//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be UiState ]
+//[RIVIEW]
 
 // 	private bORROW_bOOK_cONTROL CoNtRoL;
 	private BorrowBookControl control;	// variable type 'bORROW_bOOK_cONTROL' and name 'CoNtRoL' changed to 'BorrowBookControl' and 'control' respectively
@@ -18,6 +24,9 @@ public class BorrowBookUI {
 	private Scanner input;			// variable name 'InPuT' changed to 'input'
 // 	private uI_STaTe StaTe;
 	private UIState state;			// variable type 'uI_STaTe' and name 'StaTe' changed to 'UIState' and 'state'
+//[RIVIEW]
+	//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be UiState ]
+//[RIVIEW]
 
 	
 // 	public BorrowBookUI(bORROW_bOOK_cONTROL control) {
@@ -28,8 +37,14 @@ public class BorrowBookUI {
 		input = new Scanner(System.in);			// variable name 'InPuT' changed to 'input'
 // 		StaTe = uI_STaTe.INITIALISED;
 		state = UISTate.INITIALISED;			// variable name 'StaTe' and enum name 'uI_STaTe' changed to 'state' and 'UISTate'
+//[RIVIEW]
+		//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be UiState ]
+//[RIVIEW]
 // 		control.SeT_Ui(this);
 		control.setUI(this);				// function name 'SeT_Ui' changed to 'setUI'
+//[RIVIEW]
+	//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be SetUi ]
+//[RIVIEW]
 	}
 
 	
@@ -51,6 +66,9 @@ public class BorrowBookUI {
 			
 // 	public void SeT_StAtE(uI_STaTe StAtE) {
 	public void setState(UIState state) {	// function name 'SeT_StAtE', its parameter type 'uI_STaTe' and name 'StAtE' changed to 'setState', 'UIState' and 'state' respectively
+//[RIVIEW]
+		//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be UiState ]
+//[RIVIEW]
 // 		this.StaTe = StAtE;
 		this.state = state;		// variable name 'StaTe' and 'StAtE' changed to 'state'
 	}
