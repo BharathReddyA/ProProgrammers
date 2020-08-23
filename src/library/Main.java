@@ -144,11 +144,13 @@ public class Main {
 					break;
 					
 				case "P": 
-					PAY_FINES();
+// 					PAY_FINES();			
+					payFines();			// function name 'PAY_FINES' changed to 'payFines'
 					break;
 					
 				case "T": 
-					INCREMENT_DATE();
+// 					INCREMENT_DATE();
+					incrementDate();		// function name 'INCREMENT_DATE' changed to 'incrementDate'
 					break;
 					
 				case "Q": 
@@ -160,7 +162,8 @@ public class Main {
 					break;
 				}
 				
-				Library.SaVe();
+// 				Library.SaVe();
+				Library.save();				// method name 'SaVe' changed to 'save'
 			}			
 		} catch (RuntimeException e) {
 			output(e);
