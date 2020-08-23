@@ -190,9 +190,11 @@ public class Main {
 
 
 
-	private static void LIST_BOOKS() {
+// 	private static void LIST_BOOKS() {
+	private static void listBooks() {				// function name 'LIST_BOOKS' changed to 'listBooks'
 		output("");
-		for (Book book : LIB.lIsT_BoOkS()) {
+// 		for (Book book : LIB.lIsT_BoOkS()) {
+		for (Book book : library.listBooks()) {			// instance name 'LIB' and method name 'lIsT_BoOkS' changed to 'library' and 'listBooks'
 			output(book + "\n");
 		}		
 	}
