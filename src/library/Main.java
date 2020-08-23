@@ -31,6 +31,9 @@ import library.payfine.PayFineUI;
 //Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be PayFineUi ]
 //[RIVIEW]
 import library.payfine.pAY_fINE_cONTROL;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be PayFineControl ]
+//[RIVIEW]
 import library.returnBook.ReturnBookUI;
 import library.returnBook.rETURN_bOOK_cONTROL;
 
