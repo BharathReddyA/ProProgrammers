@@ -91,7 +91,7 @@ public class ReturnBookControl {
 		ui.display(CurrentLoan.toString());
 		
 		//if (CurrENT_loan.Is_OvEr_DuE()) 
-		if (CurrentLoan.IsOverDue()) 
+		if (CurrentLoan.IsOverDue()) {
 			//Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
 			ui.display(String.format("\nOverdue fine : $%.2f", OverDueFine));
 		
