@@ -60,8 +60,7 @@ public class FixBookControl {
 		currentBook = libary.getBook(BookId);
 		
 		//if (CuRrEnT_BoOk == null) 
-		if (currentBook == null) 
-		{
+		if (currentBook == null) {
 			//Ui.dIsPlAy("Invalid bookId");
 			ui.display("Invalid bookId");
 			return;
