@@ -35,10 +35,13 @@ public class Main {
 	private static SimpleDateFormat simpleDateFormat;	// variable name 'SDF' changed to 'simpleDateFormat'
 	
 	
-	private static String Get_menu() {
-		StringBuilder sb = new StringBuilder();
+// 	private static String Get_menu() {
+	private static String getMenu() {				// function name 'Get_menu' changed to 'getMenu'
+// 		StringBuilder sb = new StringBuilder();
+		StringBuilder stringBuilder = new StringBuilder();	// variable name 'sb' changed to 'stringBuilder'
 		
-		sb.append("\nLibrary Main Menu\n\n")
+// 		sb.append("\nLibrary Main Menu\n\n")
+		stringBuilder.append("\nLibrary Main Menu\n\n")		// variable name 'sb' changed to 'stringBuilder'
 		  .append("  M  : add member\n")
 		  .append("  LM : list members\n")
 		  .append("\n")
@@ -57,7 +60,8 @@ public class Main {
 		  .append("\n")
 		  .append("Choice : ");
 		  
-		return sb.toString();
+// 		return sb.toString();
+		return stringBuilder.toString();			// variable name 'sb' changed to 'stringBuilder'
 	}
 
 
