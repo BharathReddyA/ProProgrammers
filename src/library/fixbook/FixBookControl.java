@@ -34,9 +34,8 @@ public class FixBookControl {
 	//public void SeT_Ui(FixBookUI ui) {
 	public void SetUi(FixBookUi ui){
 		//if (!StAtE.equals(CoNtRoL_StAtE.INITIALISED))
-		if (!state.equals(ControlState.INITIALISED)) 
+		if (!state.equals(ControlState.INITIALISED)) {
 			//throw new RuntimeException("FixBookControl: cannot call setUI except in INITIALISED state");
-			{
 			throw new RuntimeException("FixBookControl: cannot call setUI except in INITIALISED state");
 			}
 			
