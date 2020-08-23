@@ -118,9 +118,9 @@ public class ReturnBookControl {
 	public void dischargeLoan(boolean isDamaged)
 	{
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.INSPECTING)) 
-		if (!state.equals(ControlState.INSPECTING)) 
+		if (!state.equals(ControlState.INSPECTING)) {
 			//throw new RuntimeException("ReturnBookControl: cannot call dischargeLoan except in INSPECTING state");
-			{
+			
 			throw new RuntimeException("ReturnBookControl: cannot call dischargeLoan except in INSPECTING state");
 			}
 		
