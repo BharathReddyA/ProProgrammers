@@ -224,8 +224,10 @@ public class Main {
 	}
 
 
-	private static void RETURN_BOOK() {
-		new ReturnBookUI(new rETURN_bOOK_cONTROL()).RuN();		
+// 	private static void RETURN_BOOK() {
+	private static void returnBook() {				// function name 'RETURN_BOOK' changed to 'returnBook'
+// 		new ReturnBookUI(new rETURN_bOOK_cONTROL()).RuN();		
+		new ReturnBookUI(new ReturnBookControl()).run();	// constructor name 'rETURN_bOOK_cONTROL' and method name 'RuN' changed to 'ReturnBookControl' and 'run'
 	}
 
 
