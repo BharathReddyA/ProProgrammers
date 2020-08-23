@@ -190,49 +190,64 @@ public class Main {
 
 
 
-	private static void LIST_BOOKS() {
+// 	private static void LIST_BOOKS() {
+	private static void listBooks() {				// function name 'LIST_BOOKS' changed to 'listBooks'
 		output("");
-		for (Book book : LIB.lIsT_BoOkS()) {
+// 		for (Book book : LIB.lIsT_BoOkS()) {
+		for (Book book : library.listBooks()) {			// instance name 'LIB' and method name 'lIsT_BoOkS' changed to 'library' and 'listBooks'
 			output(book + "\n");
 		}		
 	}
 
 
 
-	private static void LIST_MEMBERS() {
+// 	private static void LIST_MEMBERS() {
+	private static void listMembers() {				// function name 'LIST_MEMBERS' changed to 'listMembers'
 		output("");
-		for (Member member : LIB.lIsT_MeMbErS()) {
+// 		for (Member member : LIB.lIsT_MeMbErS()) {
+		for (Member member : library.listMembers()) {		// instance name 'LIB' and method name 'lIsT_MeMbErS' changed to 'library' and 'listMembers'
 			output(member + "\n");
 		}		
 	}
 
 
 
-	private static void BORROW_BOOK() {
+// 	private static void BORROW_BOOK() {
+	private static void borrowBook() {				// function name 'BORROW_BOOK' changed to 'borrowBook'
 
-		new BorrowBookUI(new BorrowBookControl()).RuN();		
+// 		new BorrowBookUI(new BorrowBookControl()).RuN();		
+		new BorrowBookUI(new BorrowBookControl()).run();	// method name 'RUN' changed to 'run'	
 
-		new BorrowBookUI(new bORROW_bOOK_cONTROL()).RuN();		
+// 		new BorrowBookUI(new bORROW_bOOK_cONTROL()).RuN();	// duplicate code removed
+
 
 	}
 
 
-	private static void RETURN_BOOK() {
-		new ReturnBookUI(new rETURN_bOOK_cONTROL()).RuN();		
+// 	private static void RETURN_BOOK() {
+	private static void returnBook() {				// function name 'RETURN_BOOK' changed to 'returnBook'
+// 		new ReturnBookUI(new rETURN_bOOK_cONTROL()).RuN();		
+		new ReturnBookUI(new ReturnBookControl()).run();	// constructor name 'rETURN_bOOK_cONTROL' and method name 'RuN' changed to 'ReturnBookControl' and 'run'
 	}
 
 
-	private static void FIX_BOOKS() {
-		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();		
+// 	private static void FIX_BOOKS() {
+	private static void fixBooks() {				// function name 'FIX_BOOKS' changed to 'fixBooks'
+// 		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();		
+		new FixBookUI(new FixBookControl()).run();		// constructor name 'fIX_bOOK_cONTROL' and method name 'RuN' changed to 'FixBookControl' and 'run'	
 	}
 
 
-	private static void INCREMENT_DATE() {
+// 	private static void INCREMENT_DATE() {
+	private static void incrementDate() {				// function name 'INCREMENT_DATE' changed to 'incrementDate'
 		try {
 			int days = Integer.valueOf(input("Enter number of days: ")).intValue();
-			CAL.incrementDate(days);
-			LIB.cHeCk_CuRrEnT_LoAnS();
-			output(SDF.format(CAL.gEt_DaTe()));
+// 			CAL.incrementDate(days);
+			calendar.incrementDate(days);			// variable name 'CAL' changed to 'calendar'
+// 			LIB.cHeCk_CuRrEnT_LoAnS();
+			library.checkCurrentLoans();			// variable name 'LIB' and method name 'cHeCk_CuRrEnT_LoAnS' changed to 'library' and 'checkCurrentLoans'
+// 			output(SDF.format(CAL.gEt_DaTe()));
+			output(simpleDateFormat.format(calendar.getDate()));		// variable name 'SDF', 'CAL' and method name 'gEt_DaTe' changed to 'simpleDateFormat', 'calendar' and 'getDate'
 			
 		} catch (NumberFormatException e) {
 			 output("\nInvalid number of days\n");
@@ -240,25 +255,37 @@ public class Main {
 	}
 
 
-	private static void ADD_BOOK() {
-		
-		String AuThOr = input("Enter author: ");
-		String TiTlE  = input("Enter title: ");
-		String CaLl_NuMbEr = input("Enter call number: ");
-		Book BoOk = LIB.aDd_BoOk(AuThOr, TiTlE, CaLl_NuMbEr);
-		output("\n" + BoOk + "\n");
+// 	private static void ADD_BOOK() {
+	private static void addBook() {				// function name 'ADD_BOOK' changed to 'addBook'
+// 		String AuThOr = input("Enter author: ");
+		String author = input("Enter author: ");		// variable name 'AuThOr' changed to 'author'
+// 		String TiTlE  = input("Enter title: ");
+		String title  = input("Enter title: ");			// variable name 'TiTlE' changed to 'title'
+// 		String CaLl_NuMbEr = input("Enter call number: ");
+		String callNumber = input("Enter call number: ");	// variable name 'CaLl_NuMbEr' changed to 'callNumber'
+// 		Book BoOk = LIB.aDd_BoOk(AuThOr, TiTlE, CaLl_NuMbEr);
+		Book book = library.addBook(author, title, callNumber);	// variable name 'BoOk', 'LIB', 'AuThOr', 'TiTlE', 'CaLl_NuMbEr' and method name 'aDd_BoOk' changed tp 'book', 'library', 'author', 'title', 'callNumber' and 'addBook' respectively
+// 		output("\n" + BoOk + "\n");
+		output("\n" + book + "\n");				// varianle name 'BoOk' changed to 'book'
 		
 	}
 
 	
-	private static void ADD_MEMBER() {
+// 	private static void ADD_MEMBER() {
+	private static void addMember() {								// function name 'ADD_MEMBER' changed to 'addMember'
 		try {
-			String LaSt_NaMe = input("Enter last name: ");
-			String FiRsT_NaMe  = input("Enter first name: ");
-			String EmAiL_AdDrEsS = input("Enter email address: ");
-			int PhOnE_NuMbEr = Integer.valueOf(input("Enter phone number: ")).intValue();
-			Member MeMbEr = LIB.aDd_MeMbEr(LaSt_NaMe, FiRsT_NaMe, EmAiL_AdDrEsS, PhOnE_NuMbEr);
-			output("\n" + MeMbEr + "\n");
+// 			String LaSt_NaMe = input("Enter last name: ");
+			String lastName = input("Enter last name: ");					// variable name 'LaSt_NaMe' changed to 'lastName'
+// 			String FiRsT_NaMe  = input("Enter first name: ");
+			String firstName  = input("Enter first name: ");
+// 			String EmAiL_AdDrEsS = input("Enter email address: ");
+			String emailAddress = input("Enter email address: ");				// variable name 'EmAiL_AdDrEsS' changed to 'emailAddress'
+// 			int PhOnE_NuMbEr = Integer.valueOf(input("Enter phone number: ")).intValue();
+			int phoneNumber = Integer.valueOf(input("Enter phone number: ")).intValue();	// variable name 'PhOnE_NuMbEr' changed to 'phoneNumber'
+// 			Member MeMbEr = LIB.aDd_MeMbEr(LaSt_NaMe, FiRsT_NaMe, EmAiL_AdDrEsS, PhOnE_NuMbEr);
+			Member member = library.addMember(lastName, firstName, emailAddress, phoneNumber);	// variable name 'MeMbEr', 'LIB', 'LaSt_NaMe', 'FiRsT_NaMe', 'EmAiL_AdDrEsS', 'PhOnE_NuMbEr' and method 'aDd_MeMbEr' changed to 'member', 'library', 'lastName', firstName', 'emailAddress', 'phoneNumber' and 'addMember' respectively
+// 			output("\n" + MeMbEr + "\n");
+			output("\n" + member + "\n");							// variable name 'MeMbEr' changed to 'member'		
 			
 		} catch (NumberFormatException e) {
 			 output("\nInvalid phone number\n");
@@ -269,7 +296,8 @@ public class Main {
 
 	private static String input(String prompt) {
 		System.out.print(prompt);
-		return IN.nextLine();
+// 		return IN.nextLine();
+		return input.nextLine();				// variable name 'IN' changed to 'input'
 	}
 	
 	
