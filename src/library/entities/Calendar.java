@@ -6,8 +6,7 @@ package library.entities;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class Calendar 
-{
+public class Calendar {
 	
 	//private static Calendar sElF;
 	private static Calendar seif;
