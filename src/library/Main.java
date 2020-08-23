@@ -173,15 +173,17 @@ public class Main {
 
 	
 // 	private static void PAY_FINES() {
-	private static void payFines() {				// fnction name 'PAY_FINES' changed to 'payFines'
+	private static void payFines() {				// function name 'PAY_FINES' changed to 'payFines'
 // 		new PayFineUI(new pAY_fINE_cONTROL()).RuN();		
 		new PayFineUI(new PayFineControl()).run();		// constructors name 'pAY_fINE_cONTROL' changed to 'PayFineControl' and
 	}								//	method name 'RUN' changed to 'run'
 
 
-	private static void LIST_CURRENT_LOANS() {
+// 	private static void LIST_CURRENT_LOANS() {			
+	private static void listCurrentLoans() {			// function name 'LIST_CURRENT_LOANS' changed to 'listCurrentLoans'
 		output("");
-		for (Loan loan : LIB.lISt_CuRrEnT_LoAnS()) {
+// 		for (Loan loan : LIB.lISt_CuRrEnT_LoAnS()) {
+		for (Loan loan : library.listCurrentLoans()) {		// instance name 'LIB' and method name 'lISt_CuRrEnT_LoAnS' changed to 'library' and 'listCurrentLoans'
 			output(loan + "\n");
 		}		
 	}
