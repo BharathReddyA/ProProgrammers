@@ -201,9 +201,11 @@ public class Main {
 
 
 
-	private static void LIST_MEMBERS() {
+// 	private static void LIST_MEMBERS() {
+	private static void listMembers() {			// function name 'LIST_MEMBERS' changed to 'listMembers'
 		output("");
-		for (Member member : LIB.lIsT_MeMbErS()) {
+// 		for (Member member : LIB.lIsT_MeMbErS()) {
+		for (Member member : library.listMembers()) {	// instance variable name 'LIB' and method name 'lIsT_MeMbErS' changed to 'library' and 'listMembers'
 			output(member + "\n");
 		}		
 	}
