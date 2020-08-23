@@ -54,8 +54,7 @@ public class ReturnBookControl {
 	public void bookScanned(int bookId){
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.READY)) 
 		if (!state.equals(ControlState.READY)) 
-			//throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");
-			{
+			//throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");{
 			throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");
 			}
 		
