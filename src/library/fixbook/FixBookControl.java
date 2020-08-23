@@ -90,9 +90,8 @@ public class FixBookControl {
 			}
 			
 		//if (mUsT_FiX) 
-		if (mustFix) 
+		if (mustFix) {
 			//LiBrArY.RePaIr_BoOk(CuRrEnT_BoOk);
-			{
 			libary.repairBook(currentBook);
 			}
 		
