@@ -6,8 +6,7 @@ package library.entities;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class Calendar 
-{
+public class Calendar {
 	
 	//private static Calendar sElF;
 	private static Calendar seif;
@@ -15,18 +14,15 @@ public class Calendar
 	private static java.util.Calendar calender;
 	
 	
-	private Calendar() 
-	{
+	private Calendar() {
 		//cAlEnDaR = java.util.Calendar.getInstance();
 		calender = java.util.Calendar.getInstance();
 	}
 	
 	//public static Calendar gEtInStAnCe() {
-	public static Calendar getInStance() 
-	{
+	public static Calendar getInStance() {
 		//if (sElF == null) {
-		if (seif == null) 
-		{
+		if (seif == null) {
 			//sElF = new Calendar();
 			seif = new Calendar();
 		}
@@ -34,17 +30,14 @@ public class Calendar
 		return seif;
 	}
 	
-	public void incrementDate(int days) 
-	{
+	public void incrementDate(int days) {
 		//cAlEnDaR.add(java.util.Calendar.DATE, days);
 		calender.add(java.util.Calendar.DATE, days);
 	}
 	
 	//public synchronized void SeT_DaTe(Date DaTe) {
-	public synchronized void SetDate(Date date) 
-	{
-		try 
-		{
+	public synchronized void SetDate(Date date) {
+		try {
 			//cAlEnDaR.setTime(DaTe);
 			calender.setTime(date);
 			/*cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
@@ -61,10 +54,8 @@ public class Calendar
 		}	
 	}
 	//public synchronized Date gEt_DaTe() {
-	public synchronized Date getDate() 
-	{
-		try 
-		{
+	public synchronized Date getDate() {
+		try {
 	        /*cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
 	        cAlEnDaR.set(java.util.Calendar.MINUTE, 0);  
 	        cAlEnDaR.set(java.util.Calendar.SECOND, 0);  
@@ -76,15 +67,13 @@ public class Calendar
 			calender.set(java.util.Calendar.MILLISECOND, 0);
 			return calender.getTime();
 		}
-		catch (Exception e) 
-		{
+		catch (Exception e) {
 			throw new RuntimeException(e);
 		}	
 	}
 
 	//public synchronized Date gEt_DuE_DaTe(int loanPeriod) {
-	 public synchronized Date getDueDate(int loanPeriod) 
-	 {
+	 public synchronized Date getDueDate(int loanPeriod) {
 		//Date nOw = gEt_DaTe();
 		Date now = getDate();
 		//cAlEnDaR.add(java.util.Calendar.DATE, loanPeriod);
@@ -98,8 +87,7 @@ public class Calendar
 	 }
 	
 	//public synchronized long GeT_DaYs_DiFfErEnCe(Date targetDate) {
-	 public synchronized long GetDaysDifference(Date targetDate) 
-	 {
+	 public synchronized long GetDaysDifference(Date targetDate) {
 		 
 		//long Diff_Millis = gEt_DaTe().getTime() - targetDate.getTime();
 		long differenceMilliseconds = getDate().getTime() - targetDate.getTime();
