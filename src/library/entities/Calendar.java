@@ -37,8 +37,7 @@ public class Calendar {
 	
 	//public synchronized void SeT_DaTe(Date DaTe) {
 	public synchronized void SetDate(Date date) {
-		try 
-		{
+		try {
 			//cAlEnDaR.setTime(DaTe);
 			calender.setTime(date);
 			/*cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
