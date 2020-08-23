@@ -36,8 +36,7 @@ public class Calendar {
 	}
 	
 	//public synchronized void SeT_DaTe(Date DaTe) {
-	public synchronized void SetDate(Date date) 
-	{
+	public synchronized void SetDate(Date date) {
 		try 
 		{
 			//cAlEnDaR.setTime(DaTe);
