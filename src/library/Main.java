@@ -88,17 +88,20 @@ public class Main {
 				output(book);				// variable name 'b' changed to 'book'
 			}
 						
-			MENU = Get_menu();
-			MENU = Get_menu();
+// 			MENU = Get_menu();
+			MENU = getMenu();				// variable name 'MENU' and function name 'Get_menu' changd to 'menu' and 'getMenu'
 			
 			boolean e = false;
 			
 			while (!e) {
 				
-				output("\n" + SDF.format(CAL.gEt_DaTe()));
-				String c = input(MENU);
+// 				output("\n" + SDF.format(CAL.gEt_DaTe()));
+				output("\n" + simpleDateFormat.format(calendar.getDate()));	// variable name 'SDF', 'CAL' and method name 'gEt_DaTe' changed to 'simpleDateFormat', 'calendar' and 'getDate'
+// 				String c = input(MENU);
+				String string = input(menu);				// variable name 'c', 'MENU' changed to 'string' and 'menu'
 				
-				switch (c.toUpperCase()) {
+// 				switch (c.toUpperCase()) {
+				switch (string.toUpperCase()) {				// variable name 'c' changed to 'string'
 				
 				case "M": 
 					ADD_MEMBER();
