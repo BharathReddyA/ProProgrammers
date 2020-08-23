@@ -238,12 +238,16 @@ public class Main {
 	}
 
 
-	private static void INCREMENT_DATE() {
+// 	private static void INCREMENT_DATE() {
+	private static void incrementDate() {				// function name 'INCREMENT_DATE' changed to 'incrementDate'
 		try {
 			int days = Integer.valueOf(input("Enter number of days: ")).intValue();
-			CAL.incrementDate(days);
-			LIB.cHeCk_CuRrEnT_LoAnS();
-			output(SDF.format(CAL.gEt_DaTe()));
+// 			CAL.incrementDate(days);
+			calendar.incrementDate(days);			// variable name 'CAL' changed to 'calendar'
+// 			LIB.cHeCk_CuRrEnT_LoAnS();
+			library.checkCurrentLoans();			// variable name 'LIB' and method name 'cHeCk_CuRrEnT_LoAnS' changed to 'library' and 'checkCurrentLoans'
+// 			output(SDF.format(CAL.gEt_DaTe()));
+			output(simpleDateFormat.format(calendar.getDate()));		// variable name 'SDF', 'CAL' and method name 'gEt_DaTe' changed to 'simpleDateFormat', 'calendar' and 'getDate'
 			
 		} catch (NumberFormatException e) {
 			 output("\nInvalid number of days\n");
