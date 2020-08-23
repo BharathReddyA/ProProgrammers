@@ -243,6 +243,9 @@ public class Main {
 
 // 		new BorrowBookUI(new BorrowBookControl()).RuN();		
 		new BorrowBookUI(new BorrowBookControl()).run();	// method name 'RUN' changed to 'run'	
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be BorrowBookUi ]
+//[RIVIEW]
 
 // 		new BorrowBookUI(new bORROW_bOOK_cONTROL()).RuN();	// duplicate code removed
 
