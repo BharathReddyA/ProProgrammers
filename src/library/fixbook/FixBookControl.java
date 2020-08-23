@@ -105,8 +105,7 @@ public class FixBookControl {
 
 	
 	//public void SCannING_COMplete() {
-	public void scanningComplete() 
-	{
+	public void scanningComplete() {
 		//if (!StAtE.equals(CoNtRoL_StAtE.READY)) 
 		if (!state.equals(ControlState.READY))
 			//throw new RuntimeException("FixBookControl: cannot call scanningComplete except in READY state");
