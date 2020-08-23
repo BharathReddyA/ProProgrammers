@@ -30,8 +30,7 @@ public class Calendar {
 		return seif;
 	}
 	
-	public void incrementDate(int days) 
-	{
+	public void incrementDate(int days) {
 		//cAlEnDaR.add(java.util.Calendar.DATE, days);
 		calender.add(java.util.Calendar.DATE, days);
 	}
