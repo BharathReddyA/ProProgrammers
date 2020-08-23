@@ -105,38 +105,42 @@ public class Main {
 				
 				case "M": 
 // 					ADD_MEMBER();
-					ADD_MEMBER();			// function name 'ADD_MEMBER' changed to 'addMember'	
+					addMember();			// function name 'ADD_MEMBER' changed to 'addMember'	
 					break;
 					
 				case "LM": 
 // 					LIST_MEMBERS();
-					LIST_MEMBERS();			// function name 'LIST_MEMBERS' changed to 'listMember'
+					listMember();			// function name 'LIST_MEMBERS' changed to 'listMember'
 					break;
 					
 				case "B": 
 // 					ADD_BOOK();
-					ADD_BOOK();			// function name 'ADD_BOOK' changed to 'addBook'
+					addBook();			// function name 'ADD_BOOK' changed to 'addBook'
 					break;
 					
 				case "LB": 
 // 					LIST_BOOKS();
-					LIST_BOOKS();			// function name 'LIST_BOOKS' changed to 'listBooks'
+					listBooks();			// function name 'LIST_BOOKS' changed to 'listBooks'
 					break;
 					
 				case "FB": 
-					FIX_BOOKS();
+// 					FIX_BOOKS();
+					fixBooks();			// function name 'FIX_BOOKS' changed to 'fixBooks'
 					break;
 					
 				case "L": 
-					BORROW_BOOK();
+// 					BORROW_BOOK();
+					borrowBook();			// function name 'BORROW_BOOK' changed to 'borrowBook'
 					break;
 					
 				case "R": 
-					RETURN_BOOK();
+// 					RETURN_BOOK();
+					returnBook();			// function name 'RETURN_BOOK' changed to 'returnBook'
 					break;
 					
 				case "LL": 
-					LIST_CURRENT_LOANS();
+// 					LIST_CURRENT_LOANS();
+					listCurrentLoans();		// function name 'LIST_CURRENT_LOANS' changed to 'listCurrentLoans'
 					break;
 					
 				case "P": 
