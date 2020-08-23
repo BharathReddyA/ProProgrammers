@@ -7,9 +7,7 @@ import library.entities.Book;
 import library.entities.Library;
 
 //public class fIX_bOOK_cONTROL {
-public class FixBookControl
-
-{
+public class FixBookControl {
 	
 	//private FixBookUI Ui;
 	private FixBookUi ui;
