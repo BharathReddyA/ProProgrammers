@@ -12,11 +12,22 @@ public class PayFineUI {
 	private UI_State State;
 
 	
+
+	public PayFineUI(Pay_Fine_Conrol Control) {
+		this.Control = Control;
+		input = new Scanner(System.in);
+		State = UI_State.INITIALISED;
+		Control.Set_UI(this);
+	}
+	
+	
+	public void Set_State(UI_State State) {
+
 	public PayFineUI(Pay_Fine_Control Control) {
 		this.Control = Control;
 		input = new Scanner(System.in);
 		State = UI_State.INITIALISED;
-		control.Set_UI(this);
+		Control.Set_UI(this);
 	}
 	
 	
