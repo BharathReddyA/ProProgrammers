@@ -228,9 +228,6 @@ public class Main {
 
 // 		new BorrowBookUI(new BorrowBookControl()).RuN();		
 		new BorrowBookUI(new BorrowBookControl()).run();	// method name 'RUN' changed to 'run'	
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be BorrowBookUi ]
-//[RIVIEW]
 
 // 		new BorrowBookUI(new bORROW_bOOK_cONTROL()).RuN();	// duplicate code removed
 
@@ -242,9 +239,6 @@ public class Main {
 	private static void returnBook() {				// function name 'RETURN_BOOK' changed to 'returnBook'
 // 		new ReturnBookUI(new rETURN_bOOK_cONTROL()).RuN();		
 		new ReturnBookUI(new ReturnBookControl()).run();	// constructor name 'rETURN_bOOK_cONTROL' and method name 'RuN' changed to 'ReturnBookControl' and 'run'
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be ReturnBookUi ]
-//[RIVIEW]
 	}
 
 
