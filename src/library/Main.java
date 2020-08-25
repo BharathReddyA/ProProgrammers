@@ -16,9 +16,6 @@ import library.entities.Library;
 import library.entities.Loan;
 import library.entities.Member;
 import library.fixbook.FixBookUI;
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookUi ]
-//[RIVIEW]
 import library.fixbook.fIX_bOOK_cONTROL;
 //[RIVIEW]
 //Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookControl ]
