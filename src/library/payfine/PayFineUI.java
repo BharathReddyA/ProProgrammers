@@ -5,42 +5,42 @@ import java.util.Scanner;
 public class PayFineUI {
 
 
-	public static enum uI_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
+	public static enum UI_State { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
 
-	private pAY_fINE_cONTROL CoNtRoL;
+	private Pay_Fine_Control Control;
 	private Scanner input;
-	private uI_sTaTe StAtE;
+	private UI_State State;
 
 	
-	public PayFineUI(pAY_fINE_cONTROL control) {
-		this.CoNtRoL = control;
+	public PayFineUI(Pay_Fine_Control Control) {
+		this.Control = Control;
 		input = new Scanner(System.in);
-		StAtE = uI_sTaTe.INITIALISED;
-		control.SeT_uI(this);
+		State = UI_State.INITIALISED;
+		control.Set_UI(this);
 	}
 	
 	
-	public void SeT_StAtE(uI_sTaTe state) {
-		this.StAtE = state;
+	public void Set_State(UI_State State) {
+		this.State = State;
 	}
 
 
-	public void RuN() {
+	public void Run() {
 		output("Pay Fine Use Case UI\n");
 		
 		while (true) {
 			
-			switch (StAtE) {
+			switch (State) {
 			
 			case READY:
 				String Mem_Str = input("Swipe member card (press <enter> to cancel): ");
 				if (Mem_Str.length() == 0) {
-					CoNtRoL.CaNcEl();
+					Control.Cancel();
 					break;
 				}
 				try {
 					int Member_ID = Integer.valueOf(Mem_Str).intValue();
-					CoNtRoL.CaRd_sWiPeD(Member_ID);
+					Control.Card_Swiped(Member_ID);
 				}
 				catch (NumberFormatException e) {
 					output("Invalid memberId");
@@ -48,21 +48,21 @@ public class PayFineUI {
 				break;
 				
 			case PAYING:
-				double AmouNT = 0;
+				double Amount = 0;
 				String Amt_Str = input("Enter amount (<Enter> cancels) : ");
 				if (Amt_Str.length() == 0) {
-					CoNtRoL.CaNcEl();
+					Control.Cancel();
 					break;
 				}
 				try {
-					AmouNT = Double.valueOf(Amt_Str).doubleValue();
+					Amount = Double.valueOf(Amt_Str).doubleValue();
 				}
 				catch (NumberFormatException e) {}
-				if (AmouNT <= 0) {
+				if (Amount <= 0) {
 					output("Amount must be positive");
 					break;
 				}
-				CoNtRoL.PaY_FiNe(AmouNT);
+				Control.Pay_Fine(Amount);
 				break;
 								
 			case CANCELLED:
@@ -75,7 +75,7 @@ public class PayFineUI {
 			
 			default:
 				output("Unhandled state");
-				throw new RuntimeException("FixBookUI : unhandled state :" + StAtE);			
+				throw new RuntimeException("FixBookUI : unhandled state :" + State);			
 			
 			}		
 		}		
@@ -93,7 +93,7 @@ public class PayFineUI {
 	}	
 			
 
-	public void DiSplAY(Object object) {
+	public void Display(Object object) {
 		output(object);
 	}
 
