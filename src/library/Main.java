@@ -190,9 +190,6 @@ public class Main {
 	private static void payFines() {				// function name 'PAY_FINES' changed to 'payFines'
 // 		new PayFineUI(new pAY_fINE_cONTROL()).RuN();		
 		new PayFineUI(new PayFineControl()).run();		// constructors name 'pAY_fINE_cONTROL' changed to 'PayFineControl' and
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be PayFineUi ]
-//[RIVIEW]
 	}								//	method name 'RUN' changed to 'run'
 
 
