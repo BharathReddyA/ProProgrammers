@@ -246,9 +246,6 @@ public class Main {
 	private static void fixBooks() {				// function name 'FIX_BOOKS' changed to 'fixBooks'
 // 		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();		
 		new FixBookUI(new FixBookControl()).run();		// constructor name 'fIX_bOOK_cONTROL' and method name 'RuN' changed to 'FixBookControl' and 'run'
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookUi ]
-//[RIVIEW]
 	}
 
 
