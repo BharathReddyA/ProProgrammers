@@ -13,7 +13,7 @@ public class ReturnBookControl {
 
 
 	//private ReturnBookUI Ui;
-	private ReturnBookUi ui;
+	private ReturnBookUI ui;
 	//private enum cOnTrOl_sTaTe { INITIALISED, READY, INSPECTING };
 	private enum ControlState { INITIALISED, READY, INSPECTING };
 	//private cOnTrOl_sTaTe sTaTe;
@@ -35,7 +35,7 @@ public class ReturnBookControl {
 	
 	
 	//public void sEt_uI(ReturnBookUI ui)
-	public void setUi(ReturnBookUi ui){
+	public void setUI(ReturnBookUI ui){
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.INITIALISED)) 
 		if (!state.equals(ControlState .INITIALISED)) {
 			//throw new RuntimeException("ReturnBookControl: cannot call setUI except in INITIALISED state");
@@ -44,7 +44,7 @@ public class ReturnBookControl {
 		//this.Ui = uI;
 		this.ui = ui;
 		//uI.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
-		ui.setState(ReturnBookUi.uiState.READY);
+		ui.setState(ReturnBookUI.uiState.READY);
 		//sTaTe = cOnTrOl_sTaTe.READY;		
 		state = ControlState.READY;		
 	}
@@ -59,54 +59,48 @@ public class ReturnBookControl {
 			}
 		
 		//Book cUrReNt_bOoK = lIbRaRy.gEt_BoOk(bOoK_iD);
-		Book CurrentBook = libary.getBook(bookId);
+		Book currentBook = libary.getBook(bookId);
 		
 		//if (cUrReNt_bOoK == null) 
-		if (CurrentBook == null) {
+		if (currentBook == null) {
 			//Ui.DiSpLaY("Invalid Book Id");
 			ui.display("Invalid Book Id");
 			return;
 		}
 		//if (!cUrReNt_bOoK.iS_On_LoAn()) 
-		if (!CurrentBook.isOnLoan()) {
+		if (!currentBook.isOnLoan()) {
 			//Ui.DiSpLaY("Book has not been borrowed");
 			ui.display("Book has not been borrowed");
 			return;
 		}		
 		//CurrENT_loan = lIbRaRy.GeT_LoAn_By_BoOkId(bOoK_iD);	
-		CurrentLoan = libary.getLoanByBookId(bookId);	
+		currentLoan = libary.getLoanByBookId(bookId);	
 		//double Over_Due_Fine = 0.0;
 		double overDueFine = 0.0;
 		//if (CurrENT_loan.Is_OvEr_DuE()) 
-		if (CurrentLoan.IsOverDue()) {
+		if (currentLoan.isOverDue()) {
 			//Over_Due_Fine = lIbRaRy.CaLcUlAtE_OvEr_DuE_FiNe(CurrENT_loan);
-			OverDueFine = libary.calculateOverDueFine(CurrentLoan);
+			overDueFine = libary.calculateOverDueFine(currentLoan);
 		}
 		
 		//Ui.DiSpLaY("Inspecting");
 		ui.display("Inspecting");
 		//Ui.DiSpLaY(cUrReNt_bOoK.toString());
-		ui.display(CurrentBook.toString());
+		ui.display(currentBook.toString());
 		//Ui.DiSpLaY(CurrENT_loan.toString());
-		ui.display(CurrentLoan.toString());
+		ui.display(currentLoan.toString());
 		
 		//if (CurrENT_loan.Is_OvEr_DuE()) 
-		if (CurrentLoan.IsOverDue()) {
+		if (currentLoan.isOverDue()) {
 			
 			//Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
-			ui.display(String.format("\nOverdue fine : $%.2f", OverDueFine));
+			ui.display(String.format("\nOverdue fine : $%.2f", overDueFine));
 		}
-		// >> 
-		//[Reviewer] variable and method name mistaken multiple time
-		//[Reviewer] please consider lines -> 68, 71, 77, 83, 87, 89, 95, 97 , 100 and 103
-		//[Reviewer]{variables name 'CurrentLoan', 'CurrentBook' and 'OverDueFine' does not follows code style guidelines it should be 'currentLoan', 'CurrentBook' and 'overDueFine' respectively}
-		//[Reviewer]{method name 'IsOverDue' does not follow code styele guidelines it should be 'isOverDue'}
-		// <<
 		
 		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
 		ui.setState(ReturnBookUI.uiState.INSPECTING);
 		//sTaTe = cOnTrOl_sTaTe.INSPECTING;	
-		state = ControlState.INSPECTING;		
+		state = controlState.INSPECTING;		
 	}
 
 
@@ -119,7 +113,7 @@ public class ReturnBookControl {
 			}
 			
 		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.COMPLETED);
-		ui.setState(ReturnBookUi.uiState.COMPLETED);		
+		ui.setState(ReturnBookUI.uiState.COMPLETED);		
 	}
 
 
@@ -137,7 +131,7 @@ public class ReturnBookControl {
 		//CurrENT_loan = null;
 		currentLoan = null;
 		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
-		ui.setState(ReturnBookUi.uiState.READY);
+		ui.setState(ReturnBookUI.uiState.READY);
 		//sTaTe = cOnTrOl_sTaTe.READY;
 		state = ControlState.READY;				
 	}
