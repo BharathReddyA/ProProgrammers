@@ -1,35 +1,26 @@
 package library;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
-
 import library.borrowbook.BorrowBookUI;
 
 import library.borrowbook.BorrowBookControl;
-
-import library.borrowbook.bORROW_bOOK_cONTROL;
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T deleted the code on top ]
-//[RIVIEW]
+// import library.borrowbook.bORROW_bOOK_cONTROL;
+import library.borrowbook.BorrowBookControl;         // file name 'bORROW_bOOK_cONTROL' changed to 'BorrowBookControl'
 import library.entities.Book;
 import library.entities.Calendar;
 import library.entities.Library;
 import library.entities.Loan;
 import library.entities.Member;
 import library.fixbook.FixBookUI;
-import library.fixbook.fIX_bOOK_cONTROL;
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookControl ]
-//[RIVIEW]
+
+// import library.fixbook.fIX_bOOK_cONTROL;
+import library.fixbook.FixBookControl;              // file name 'fIX_bOOK_cONTROL' changed to 'FixBookControl'
 import library.payfine.PayFineUI;
-import library.payfine.pAY_fINE_cONTROL;
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be PayFineControl ]
-//[RIVIEW]
+// import library.payfine.pAY_fINE_cONTROL
+import library.payfine.PayFineControl;.             // file name 'pAY_fINE_cONTROL' changed to 'PayFineControl'
 import library.returnBook.ReturnBookUI;
-import library.returnBook.rETURN_bOOK_cONTROL;
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be ReturnBookControl ]
-//[RIVIEW]
+// import library.returnBook.rETURN_bOOK_cONTROL;
+import library.returnBook.ReturnBookControl;        // file name 'rETURN_bOOK_cONTROL' changed to 'ReturnBookControl'
 
 
 public class Main {

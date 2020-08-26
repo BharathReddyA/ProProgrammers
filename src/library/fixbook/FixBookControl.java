@@ -20,6 +20,9 @@ public class FixBookControl {
 	private Library libary;
 	//private Book CuRrEnT_BoOk;
 	private Book CurrentBook;
+	// >>
+	//[Reviewer]{Variable name 'CurrentBook' does not follows code style guidelines it should be 'currentBook'}
+	// <<
 
 
 	//public fIX_bOOK_cONTROL() {
@@ -75,6 +78,9 @@ public class FixBookControl {
 		ui.display(currentBook.toString());
 		//Ui.SeT_StAtE(FixBookUI.uI_sTaTe.FIXING);
 		ui.SetState(FixBookUI.uiState.FIXING);
+		// >>
+		//[Reviewer]{method name 'SetState' does not follows code style guidelines it should be 'setState'}
+		// <<
 		//StAtE = CoNtRoL_StAtE.FIXING;	
 		state = ControlState.FIXING;		
 	}

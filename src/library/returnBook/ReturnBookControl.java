@@ -24,11 +24,17 @@ public class ReturnBookControl {
 	//private Loan CurrENT_loan;
 	private Loan CurrentLoan;
 	
+	// >>
+	//[Reviewer]{variable name 'CurrentLoan' does not follows code style guidelines it should be 'currentLoan'}
+	// <<
 
 	//public rETURN_bOOK_cONTROL() {
 	public ReturnBookControl() {
 		//this.lIbRaRy = Library.GeTiNsTaNcE();
 		this.libary = Library.GetInstance();
+		// >>
+		//[Reviewer]{method name 'GetInstance' does not follows code style guidelines it should be 'getInstance'}
+		// <<
 		//sTaTe = cOnTrOl_sTaTe.INITIALISED;
 		state = ControlState.INITIALISED;
 	}
@@ -92,9 +98,16 @@ public class ReturnBookControl {
 		
 		//if (CurrENT_loan.Is_OvEr_DuE()) 
 		if (CurrentLoan.IsOverDue()) {
+			
 			//Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
 			ui.display(String.format("\nOverdue fine : $%.2f", OverDueFine));
 		}
+		// >> 
+		//[Reviewer] variable and method name mistaken multiple time
+		//[Reviewer] please consider lines -> 68, 71, 77, 83, 87, 89, 95, 97 , 100 and 103
+		//[Reviewer]{variables name 'CurrentLoan', 'CurrentBook' and 'OverDueFine' does not follows code style guidelines it should be 'currentLoan', 'CurrentBook' and 'overDueFine' respectively}
+		//[Reviewer]{method name 'IsOverDue' does not follow code styele guidelines it should be 'isOverDue'}
+		// <<
 		
 		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
 		ui.setState(ReturnBookUI.uiState.INSPECTING);
