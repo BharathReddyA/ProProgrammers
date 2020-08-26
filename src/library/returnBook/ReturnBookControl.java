@@ -22,19 +22,13 @@ public class ReturnBookControl {
 	//private Library lIbRaRy;
 	private Library libary;
 	//private Loan CurrENT_loan;
-	private Loan CurrentLoan;
+	private Loan currentLoan;
 	
-	// >>
-	//[Reviewer]{variable name 'CurrentLoan' does not follows code style guidelines it should be 'currentLoan'}
-	// <<
 
 	//public rETURN_bOOK_cONTROL() {
 	public ReturnBookControl() {
 		//this.lIbRaRy = Library.GeTiNsTaNcE();
-		this.libary = Library.GetInstance();
-		// >>
-		//[Reviewer]{method name 'GetInstance' does not follows code style guidelines it should be 'getInstance'}
-		// <<
+		this.libary = Library.getInstance();
 		//sTaTe = cOnTrOl_sTaTe.INITIALISED;
 		state = ControlState.INITIALISED;
 	}
