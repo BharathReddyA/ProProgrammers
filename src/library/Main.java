@@ -3,22 +3,45 @@ import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 import library.borrowbook.BorrowBookUI;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be BorrowBookUi ]
+//[RIVIEW]
 
 import library.borrowbook.BorrowBookControl;
 
 import library.borrowbook.bORROW_bOOK_cONTROL;
-
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T deleted the code on top ]
+//[RIVIEW]
 import library.entities.Book;
 import library.entities.Calendar;
 import library.entities.Library;
 import library.entities.Loan;
 import library.entities.Member;
 import library.fixbook.FixBookUI;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookUi ]
+//[RIVIEW]
 import library.fixbook.fIX_bOOK_cONTROL;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookControl ]
+//[RIVIEW]
 import library.payfine.PayFineUI;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be PayFineUi ]
+//[RIVIEW]
 import library.payfine.pAY_fINE_cONTROL;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be PayFineControl ]
+//[RIVIEW]
 import library.returnBook.ReturnBookUI;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be ReturnBookUi ]
+//[RIVIEW]
 import library.returnBook.rETURN_bOOK_cONTROL;
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be ReturnBookControl ]
+//[RIVIEW]
 
 
 public class Main {
@@ -176,6 +199,9 @@ public class Main {
 	private static void payFines() {				// function name 'PAY_FINES' changed to 'payFines'
 // 		new PayFineUI(new pAY_fINE_cONTROL()).RuN();		
 		new PayFineUI(new PayFineControl()).run();		// constructors name 'pAY_fINE_cONTROL' changed to 'PayFineControl' and
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be PayFineUi ]
+//[RIVIEW]
 	}								//	method name 'RUN' changed to 'run'
 
 
@@ -217,6 +243,9 @@ public class Main {
 
 // 		new BorrowBookUI(new BorrowBookControl()).RuN();		
 		new BorrowBookUI(new BorrowBookControl()).run();	// method name 'RUN' changed to 'run'	
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be BorrowBookUi ]
+//[RIVIEW]
 
 // 		new BorrowBookUI(new bORROW_bOOK_cONTROL()).RuN();	// duplicate code removed
 
@@ -228,13 +257,19 @@ public class Main {
 	private static void returnBook() {				// function name 'RETURN_BOOK' changed to 'returnBook'
 // 		new ReturnBookUI(new rETURN_bOOK_cONTROL()).RuN();		
 		new ReturnBookUI(new ReturnBookControl()).run();	// constructor name 'rETURN_bOOK_cONTROL' and method name 'RuN' changed to 'ReturnBookControl' and 'run'
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be ReturnBookUi ]
+//[RIVIEW]
 	}
 
 
 // 	private static void FIX_BOOKS() {
 	private static void fixBooks() {				// function name 'FIX_BOOKS' changed to 'fixBooks'
 // 		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();		
-		new FixBookUI(new FixBookControl()).run();		// constructor name 'fIX_bOOK_cONTROL' and method name 'RuN' changed to 'FixBookControl' and 'run'	
+		new FixBookUI(new FixBookControl()).run();		// constructor name 'fIX_bOOK_cONTROL' and method name 'RuN' changed to 'FixBookControl' and 'run'
+//[RIVIEW]
+//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE should be FixBookUi ]
+//[RIVIEW]
 	}
 
 
