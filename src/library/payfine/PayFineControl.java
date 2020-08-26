@@ -34,9 +34,7 @@ public class PayFineControl {		// class name 'pAY_fINE_cONTROL' changed to 'PayF
 		}	
 // 		this.Ui = uI;
 		this.Ui = ui;					// variable name 'uI' changed to 'ui'
-//[RIVIEW]
-//Reviewer : Nurul [HAVEN'T CHANGED THE NAME HERE  should be ui not Ui]
-//[RIVIEW]
+
 // 		uI.SeT_StAtE(PayFineUI.uI_sTaTe.READY);
 		ui.setState(PayFineUI.uiState.READY);		// variable name 'uI', 'uI_sTaTe'  and method name 'SeT_StAtE' changed to 'ui', 'uiState' and 'setState'
 // 		StAtE = cOnTrOl_sTaTe.READY;		
