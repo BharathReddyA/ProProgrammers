@@ -1,3 +1,7 @@
+//Author: Bharath
+//Mediator : Vinay
+//Reviewer : Shubham
+
 package library.fixbook;
 import java.util.Scanner;
 
