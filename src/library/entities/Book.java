@@ -7,17 +7,17 @@ public class Book implements Serializable {
 	
 	private String title;
 	private String author;
-	private String callno;
+	private String callNo;
 	private int id;
 	
 	private enum State { AVAILABLE, ON_LOAN, DAMAGED, RESERVED };
 	private state State;
 	
 	
-	public Book(String author, String title, String callno, int id) {
+	public Book(String author, String title, String callNo, int id) {
 		this.author = author;
 		this.title = title;
-		this.callno = callno;
+		this.callno = callNo;
 		this.id = id;
 		this.State = State.AVAILABLE;
 	}
@@ -27,7 +27,7 @@ public class Book implements Serializable {
 		sb.append("Book: ").append(iD).append("\n")
 		  .append("  Title:  ").append(title).append("\n")
 		  .append("  Author: ").append(author).append("\n")
-		  .append("  CallNo: ").append(callnO).append("\n")
+		  .append("  CallNo: ").append(callNo).append("\n")
 		  .append("  State:  ").append(State);
 		
 		return sb.toString();
