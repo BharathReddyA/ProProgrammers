@@ -17,18 +17,25 @@ public class Book implements Serializable {
 	public Book(String author, String title, String callNo, int id) {
 		this.author = author;
 		this.title = title;
+
 		this.callNo = callNo;
+
+		this.callNo = callNo;
+
 		this.id = id;
 		this.State = State.AVAILABLE;
 	}
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Book: ").append(iD).append("\n")
+		sb.append("Book: ").append(id).append("\n")
 		  .append("  Title:  ").append(title).append("\n")
 		  .append("  Author: ").append(author).append("\n")
-		  .append("  CallNo: ").append(callNO).append("\n")
-		  .append("  State:  ").append(State);
+
+		  .append("  CallNo: ").append(callNo).append("\n")
+
+		  .append("  CallNo: ").append(callNo).append("\n")
+	  .append("  State:  ").append(State);
 		
 		return sb.toString();
 	}

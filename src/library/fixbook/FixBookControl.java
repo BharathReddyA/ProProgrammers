@@ -10,7 +10,7 @@ import library.entities.Library;
 public class FixBookControl {
 	
 	//private FixBookUI Ui;
-	private FixBookUi ui;
+	private FixBookUI ui;
 	//private enum CoNtRoL_StAtE { INITIALISED, READY, FIXING };
 	private enum ControlState { INITIALISED, READY, FIXING };
 	//private CoNtRoL_StAtE StAtE;
@@ -19,7 +19,7 @@ public class FixBookControl {
 	//private Library LiBrArY;
 	private Library libary;
 	//private Book CuRrEnT_BoOk;
-	private Book CurrentBook;
+	private Book currentBook;
 
 
 	//public fIX_bOOK_cONTROL() {
@@ -32,7 +32,7 @@ public class FixBookControl {
 	
 	
 	//public void SeT_Ui(FixBookUI ui) {
-	public void SetUi(FixBookUi ui){
+	public void SetUI(FixBookUI ui){
 		//if (!StAtE.equals(CoNtRoL_StAtE.INITIALISED))
 		if (!state.equals(ControlState.INITIALISED)) {
 			//throw new RuntimeException("FixBookControl: cannot call setUI except in INITIALISED state");
@@ -42,7 +42,7 @@ public class FixBookControl {
 		//this.Ui = ui;
 		this.ui = ui;
 		//ui.SeT_StAtE(FixBookUI.uI_sTaTe.READY);
-		ui.SetState(FixBookUi.uiState.READY);
+		ui.SetState(FixBookUI.uiState.READY);
 		//StAtE = CoNtRoL_StAtE.READY;
 		state = ControlState.READY;	
 	}
@@ -74,7 +74,8 @@ public class FixBookControl {
 		//Ui.dIsPlAy(CuRrEnT_BoOk.toString());
 		ui.display(currentBook.toString());
 		//Ui.SeT_StAtE(FixBookUI.uI_sTaTe.FIXING);
-		ui.SetState(FixBookUI.uiState.FIXING);
+		ui.setState(FixBookUI.uiState.FIXING);
+
 		//StAtE = CoNtRoL_StAtE.FIXING;	
 		state = ControlState.FIXING;		
 	}
@@ -98,7 +99,7 @@ public class FixBookControl {
 		//CuRrEnT_BoOk = null;
 		currentBook = null;
 		//Ui.SeT_StAtE(FixBookUI.uI_sTaTe.READY);
-		ui.setState(FixBookUi.uiState.READY);
+		ui.setState(FixBookUI.uiState.READY);
 		//StAtE = CoNtRoL_StAtE.READY;
 		state = ControlState.READY;
 	}
