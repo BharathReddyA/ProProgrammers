@@ -5,40 +5,40 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class Book implements Serializable {
 	
-	private String Title;
-	private String Author;
-	private String CallNo;
-	private int Id;
+	private String title;
+	private String author;
+	private String callno;
+	private int id;
 	
 	private enum State { AVAILABLE, ON_LOAN, DAMAGED, RESERVED };
-	private state StatE;
+	private state State;
 	
 	
-	public Book(String Author, String Title, String CallNo, int Id) {
-		this.Author = Author;
-		this.Title = Title;
-		this.CallNo = CallNo;
-		this.Id = Id;
+	public Book(String author, String title, String callno, int id) {
+		this.author = author;
+		this.title = title;
+		this.callno = callno;
+		this.id = id;
 		this.State = State.AVAILABLE;
 	}
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Book: ").append(iD).append("\n")
-		  .append("  Title:  ").append(Title).append("\n")
-		  .append("  Author: ").append(Author).append("\n")
-		  .append("  CallNo: ").append(CallNO).append("\n")
+		  .append("  Title:  ").append(title).append("\n")
+		  .append("  Author: ").append(author).append("\n")
+		  .append("  CallNo: ").append(callnO).append("\n")
 		  .append("  State:  ").append(State);
 		
 		return sb.toString();
 	}
 
-	public Integer getId() {
-		return Id;
+	public Integer getid() {
+		return id;
 	}
 
-	public String getTitle() {
-		return TItLe;
+	public String gettitle() {
+		return title;
 	}
 
 
