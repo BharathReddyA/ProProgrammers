@@ -9,48 +9,30 @@ import java.util.concurrent.TimeUnit;
 public class Calendar {
 	
 	//private static Calendar sElF;
-	private static Calendar seif;
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'seif' it should be 'self'}
-	// <<
+	private static Calendar self;
 	//private static java.util.Calendar cAlEnDaR;
-	private static java.util.Calendar calender;
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'calender' it should be 'calendar'}
-	// <<
-	
+	private static java.util.Calendar calendar;
+
 	
 	private Calendar() {
 		//cAlEnDaR = java.util.Calendar.getInstance();
-		calender = java.util.Calendar.getInstance();
+		calendar = java.util.Calendar.getInstance();
 	}
 	
 	//public static Calendar gEtInStAnCe() {
 	public static Calendar getInStance() {
 		//if (sElF == null) {
-		if (seif == null) {
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'seif' it should be 'self'}
-	// <<
+		if (self == null) {
 			//sElF = new Calendar();
-			seif = new Calendar();
+			self = new Calendar();
 		}
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'seif' it should be 'self'}
-	// <<
 		//return sElF;
-		return seif;
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'seif' it should be 'self'}
-	// <<
+		return self;
 	}
 	
 	public void incrementDate(int days) {
 		//cAlEnDaR.add(java.util.Calendar.DATE, days);
-		calender.add(java.util.Calendar.DATE, days);
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'calender' it should be 'calendar'}
-	// <<
+		calendar.add(java.util.calendar.DATE, days);
 	}
 	
 	//public synchronized void SeT_DaTe(Date DaTe) {
@@ -58,17 +40,14 @@ public class Calendar {
 		try {
 			//cAlEnDaR.setTime(DaTe);
 			calender.setTime(date);
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'calender' it should be 'calendar'}
-	// <<
 			/*cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
 	        cAlEnDaR.set(java.util.Calendar.MINUTE, 0);  
 	        cAlEnDaR.set(java.util.Calendar.SECOND, 0);  
 	        cAlEnDaR.set(java.util.Calendar.MILLISECOND, 0);*/
-			calender.set(java.util.Calendar.HOUR_OF_DAY, 0);  
-			calender.set(java.util.Calendar.MINUTE, 0);  
-			calender.set(java.util.Calendar.SECOND, 0);  
-			calender.set(java.util.Calendar.MILLISECOND, 0);
+			calendar.set(java.util.Calendar.HOUR_OF_DAY, 0);  
+			calendar.set(java.util.Calendar.MINUTE, 0);  
+			calendar.set(java.util.Calendar.SECOND, 0);  
+			calendar.set(java.util.Calendar.MILLISECOND, 0);
 		}
 		catch (Exception e) {
 			throw new RuntimeException(e);
@@ -82,15 +61,12 @@ public class Calendar {
 	        cAlEnDaR.set(java.util.Calendar.SECOND, 0);  
 	        cAlEnDaR.set(java.util.Calendar.MILLISECOND, 0);
 			return cAlEnDaR.getTime();*/
-			calender.set(java.util.Calendar.HOUR_OF_DAY, 0);  
-			calender.set(java.util.Calendar.MINUTE, 0);  
-			calender.set(java.util.Calendar.SECOND, 0);  
-			calender.set(java.util.Calendar.MILLISECOND, 0);
-			return calender.getTime();
+			calendar.set(java.util.Calendar.HOUR_OF_DAY, 0);  
+			calendar.set(java.util.Calendar.MINUTE, 0);  
+			calendar.set(java.util.Calendar.SECOND, 0);  
+			calendar.set(java.util.Calendar.MILLISECOND, 0);
+			return calendar.getTime();
 		}
-	// >>
-	//[Reviewer]{Mistake in whole try block, see variable name's spelling 'calender' it should be 'calendar'}
-	// <<
 		
 		catch (Exception e) {
 			throw new RuntimeException(e);
@@ -104,15 +80,9 @@ public class Calendar {
 		//cAlEnDaR.add(java.util.Calendar.DATE, loanPeriod);
 		calender.add(java.util.Calendar.DATE, loanPeriod);
 		//Date dUeDaTe = cAlEnDaR.getTime();
-		Date dueDate = calender.getTime();
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'calender' it should be 'calendar'}
-	// <<
+		Date dueDate = calendar.getTime();
 		//cAlEnDaR.setTime(nOw);
-		calender.setTime(now);
-	// >>
-	//[Reviewer]{Mistake in variable name's spelling 'calender' it should be 'calendar'}
-	// <<
+		calendar.setTime(now);
 		//return dUeDaTe;
 		return dueDate;
 	 }
