@@ -32,7 +32,7 @@ public class FixBookControl {
 	
 	
 	//public void SeT_Ui(FixBookUI ui) {
-	public void SetUI(FixBookUI ui){
+	public void setUI(FixBookUI ui){
 		//if (!StAtE.equals(CoNtRoL_StAtE.INITIALISED))
 		if (!state.equals(ControlState.INITIALISED)) {
 			//throw new RuntimeException("FixBookControl: cannot call setUI except in INITIALISED state");
@@ -42,14 +42,14 @@ public class FixBookControl {
 		//this.Ui = ui;
 		this.ui = ui;
 		//ui.SeT_StAtE(FixBookUI.uI_sTaTe.READY);
-		ui.SetState(FixBookUI.uiState.READY);
+		ui.setState(FixBookUI.uiState.READY);
 		//StAtE = CoNtRoL_StAtE.READY;
 		state = ControlState.READY;	
 	}
 
 
 	//public void BoOk_ScAnNeD(int BoOkId) {
-	public void BookScanned(int BookId) {
+	public void bookScanned(int BookId) {
 		//if (!StAtE.equals(CoNtRoL_StAtE.READY))
 		if (!state.equals(ControlState.READY)) {
 			//throw new RuntimeException("FixBookControl: cannot call bookScanned except in READY state");
@@ -82,7 +82,7 @@ public class FixBookControl {
 
 
 	//public void FiX_BoOk(boolean mUsT_FiX) {
-	public void FixBook(boolean mustFix) 
+	public void fixBook(boolean mustFix) 
 	{
 		//if (!StAtE.equals(CoNtRoL_StAtE.FIXING)) 
 		if (!state.equals(ControlState.FIXING)){ 
