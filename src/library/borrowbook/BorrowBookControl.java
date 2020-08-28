@@ -15,7 +15,7 @@ public class BorrowBookControl {
 	private BorrowBookUI ui;
 	
 	private Library library;
-	private Member member;
+	private Member member;//review Member to member
 	private enum ControlState { INITIALISED, READY, RESTRICTED, SCANNING, IDENTIFIED, FINALISING, COMPLETED, CANCELLED };
 	private ControlState state;
 	
@@ -25,8 +25,8 @@ public class BorrowBookControl {
 	
 	
 	public BorrowBookControl() {
-		this.library = Library.getInstance();
-		state = ControlState.INITIALISED;
+		this.library = Library.getInstance();//review Get_Instance to getInstance
+		state = ControlState.INITIALISED;//review State to state
 	}
 	
 
@@ -40,11 +40,11 @@ public class BorrowBookControl {
 	}
 
 		
-	public void swiped(int memberId) {
+	public void swiped(int memberId) {//review Member_Id to memberId
 		if (!state.equals(ControlState.READY)) 
 			throw new RuntimeException("BorrowBookControl: cannot call cardswiped except in READY state");
 			
-		member = library.getMember(memberId);
+		member = library.getMember(memberId);//review Get_Member to getMember and Member_Id to memberId
 		if (member == null) {
 			ui.Display("Invalid memberId");
 			return;
@@ -66,7 +66,7 @@ public class BorrowBookControl {
 		if (!state.equals(ControlState.SCANNING)) 
 			throw new RuntimeException("BorrowBookControl: cannot call bookScanned except in SCANNING state");
 			
-		book = library.getBook(bookId);
+		book = library.getBook(bookId);//review Book_Id to bookId
 		if (book == null) {
 			ui.Display("Invalid bookId");
 			return;
@@ -96,7 +96,7 @@ public class BorrowBookControl {
 				ui.Display(book.toString());
 			
 			completedList = new ArrayList<Loan>();
-			ui.setState(BorrowBookUI.UiState.FINALISING);
+			ui.setState(BorrowBookUI.UiState.FINALISING);//review Borrow_Book_UI to BorrowBookUI
 			state = ControlState.FINALISING;
 		}
 	}
