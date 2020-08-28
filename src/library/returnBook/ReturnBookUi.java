@@ -10,13 +10,13 @@ public class ReturnBookUi {
 
 	public static enum uiState { INITIALISED, READY, INSPECTING, COMPLETED };
 
-	private ReturnBookControl control;
+	private ReturnBookControl control;//review Control to control
 	private Scanner input;
 	private uiState state;
 
 	
 	public ReturnBookUi(ReturnBookControl control) {
-		this.control = control;
+		this.control = control;//review Control to control
 		input = new Scanner(System.in);
 		state = uiState.INITIALISED;
 		control.setUi(this);
@@ -40,7 +40,7 @@ public class ReturnBookUi {
 				
 				else {
 					try {
-						int bookId = Integer.valueOf(bookInputString).intValue();
+						int bookId = Integer.valueOf(bookInputString).intValue();//review Book_id to bookId
 						control.bookScanned(bookId);
 					}
 					catch (NumberFormatException e) {
@@ -84,8 +84,8 @@ public class ReturnBookUi {
 		output(object);
 	}
 	
-	public void setState(uiState state) {
-		this.state = state;
+	public void setState(uiState state) {//review State to state
+		this.state = state;//review State to state
 	}
 
 	
