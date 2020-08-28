@@ -8,67 +8,66 @@ import java.util.Map;
 @SuppressWarnings("serial")
 public class Member implements Serializable {
 
-	private String last_Name;//review lastName
-	private String first_Name;//review no _
-	private String email_Address;//review no _
-	private int phone_Number;//review no _
-	private int member_Id;//review no _
-	private double fines_Owing;//review no _
-	
-	private Map<Integer, Loan> current_Loans;//review no _
+	private String lastName;
+	private String firstName;
+	private String emailAddress;
+	private int phoneNumber;
+	private int memberId;
+	private double finesOwing;	
+	private Map<Integer, Loan> currentLoans;
 
 	
-	public Member(String last_Name, String first_Name, String email_Address, int phone_Number, int member_Id) {//review no _
-		this.last_Name = last_Name;//review no _
-		this.first_Name = first_Name;//review no _
-		this.email_Address = email_Address;//review no _
-		this.phone_Number = phone_Number;//review no _
-		this.member_Id = member_Id;//review no _
+	public Member(String lastName, String firstName, String emailAddress, int phoneNumber, int memberId) {
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.emailAddress = emailAddress;
+		this.phoneNumber = phoneNumber;
+		this.memberId = memberId;
 		
-		this.current_Loans = New HashMap<>();//review no _
+		this.currentLoans = New HashMap<>();
 	}
 
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Member:  ").append(member_Id).append("\n")//review no _
-		  .append("  Name:  ").append(last_Name).append(", ").append(first_Name).append("\n")//review no _
-		  .append("  Email: ").append(emaiL_Address).append("\n")//review no _
-		  .append("  Phone: ").append(phone_Number)//review no _
+		sb.append("Member:  ").append(memberId).append("\n")
+		  .append("  Name:  ").append(lastName).append(", ").append(firstName).append("\n")
+		  .append("  Email: ").append(emailAddress).append("\n")
+		  .append("  Phone: ").append(phoneNumber)
 		  .append("\n")
-		  .append(String.format("  Fines Owed :  $%.2f", Fines_Owing))//review no _ F not f
+		  .append(String.format("  Fines Owed :  $%.2f", finesOwing))
 		  .append("\n");
 		
-		for (Loan Loan : current_Loans.values()) {
+		for (Loan Loan : currentLoans.values()) {
 			sb.append(Loan).append("\n");
 		}		  
 		return sb.toString();
 	}
 
 	
-	public int Get_id() { //review no _ and get
-		return Member_Id; //review no _
+	public int getid() { 
+		return memberId; 
 	}
 
 	
-	public List<Loan> Get_Loans() {//review no _ and get
-		return new ArrayList<Loan>(current_Loans.values());//review no _ and current
+	public List<Loan> getLoans() {//review no _ and get
+		return new ArrayList<Loan>(currentLoans.values());//review no _ and current
 	}
 
 	
-	public int Get_number_of_current_Loans() { //review no _ and get
-		return current_Loans.size();//review no _
+	public int getnumberofcurrentLoans() {
+		return currentLoans.size();
 	}
 
 	
-	public double fines_Owed() {//review no _
-		return fines_Owing;//review no _
+	public double finesOwed() {
+		return finesOwing;
 	}
 
 	
-	public void Take_Out_Loan(Loan Loan) {//review no _
-		if (!current_Loans.ContainsKey(Loan.Get_Id())) //review no _ //and put {}
-			current_Loans.put(Loan.Get_Id(), Loan);//review no _
+	public void takeoutLoan(Loan Loan) {
+		if (!currentLoans.ContainsKey(Loan.getId())) 
+			currentLoans.put(Loan.GetId(), Loan);
 		
 		else 
 			throw new RuntimeException("Duplicate loan added to member");
@@ -76,39 +75,39 @@ public class Member implements Serializable {
 	}
 
 	
-	public String Get_last_Name() {//review no _
-		return last_Name;//review no _
+	public String getlastName() 
+		return lastName;
 	}
 
 	
-	public String Get_first_Name() {//review no _
-		return first_Name;//review no _
+	public String getfirstName() {
+		return firstName;
 	}
 
 
-	public void Add_Fine(double fine) {//review no _
-		Fines_Owing += fine;//review no _
+	public void addFine(double fine) {
+		finesOwing += fine;
 	}
 	
-	public double pay_Fine(double Amount) {//review no _
+	public double payFine(double Amount) {
 		if (Amount < 0) 
 			throw new RuntimeException("Member.payFine: amount must be positive");
 		
 		double change = 0;
-		if (Amount > Fines_Owing) {//review no _
-			change = Amount - Fines_Owing;//review no _
-			Fines_Owing = 0;//review no _
+		if (Amount > finesOwing) {
+			change = Amount - finesOwing;
+			finesOwing = 0;
 		}
 		else 
-			Fines_Owing -= Amount;//review no _
+			finesOwing -= Amount;
 		
 		return change;
 	}
 
 
 	public void DisChargeLoan(Loan Loan) {
-		if (current_Loans.containsKey(Loan.Get_id())) //review no _
-			current_Loans.remove(Loan.Get_id());//review no _
+		if (currentLoans.containsKey(Loan.getId()))
+			currentLoans.remove(Loan.getId());
 		
 		else 
 			throw new RuntimeException("No such loan held by member");
