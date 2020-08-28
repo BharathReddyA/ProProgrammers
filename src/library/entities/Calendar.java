@@ -20,7 +20,7 @@ public class Calendar {
 	}
 	
 	//public static Calendar gEtInStAnCe() {
-	public static Calendar getInStance() {
+	public static Calendar getInstance() {
 		//if (sElF == null) {
 		if (self == null) {
 			//sElF = new Calendar();
